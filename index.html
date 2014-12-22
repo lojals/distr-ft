@@ -15,10 +15,18 @@ body{
 .background {
     stroke: #ddd;
     stroke-width: 1px;
-    fill: white;
+    fill: #333;
 }
-.node {
+
+
+/*.node {
   stroke: #fff;
+  stroke-width: 1.5px;
+}*/
+
+.test{
+    
+      stroke: #ff0000;
   stroke-width: 1.5px;
 }
 
@@ -104,7 +112,7 @@ body{
     var nodeWidth = 30, nodeHeight = 30;
 
     // get first node 
-    var d = modelgraph.getNode(tmdb.Movie, 550, addViewNode);
+    var d = modelgraph.getNode(tmdb.Person, 819, addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
         refocus(startNode);
@@ -157,6 +165,7 @@ body{
                 .attr("rx", 1).attr("ry", 1)
                 .attr("x", 0).attr("y", 0)
                 .attr("width", 10).attr("height", 2)
+                .attr("stroke-color", white)
                 .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
                 .on("click", function () { click(v) });
         }
