@@ -1,1 +1,10 @@
 hola Mundo
+id, type, name, image, relations[ids de bandas],articulo  ->Influencia
+id, type, name, image, relations[ids de bandas, instrumentos [2,3]],articulo  -> Musico
+id, type, name, image, relations[ids de bandas],articulo
+id, type, name, image, relations[ids de bandas],articulo
+
+
+
+http://distritosonico.com/articulo?id
+
