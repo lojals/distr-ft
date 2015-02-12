@@ -8,3 +8,28 @@ id, type, name, image, relations[ids de bandas],articulo
 
 http://distritosonico.com/articulo?id
 
+{
+    "distrito": [
+        {
+            "id": "1",
+            "type": 1,
+            "name": "Nombre1",
+            "image": "image.png",
+            "relations": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1
+                }
+            ],
+            "article": false
+        }
+    ]
+}
