@@ -1,6 +1,7 @@
 ///<reference path="../extern/jquery.d.ts"/>
 var tmdb;
 (function (tmdb) {
+    //Declaracion de el objeto NodeType y sus prototipos
     var NodeType = (function () {
     	console.log('entra a 1');
         function NodeType(type, credits, label, imagesarray) {
@@ -24,9 +25,10 @@ var tmdb;
     })();
     tmdb.NodeType = NodeType;
 	console.log('entra a 2');
+    //Creacion de dos tipos de nodo Movie and Person
     tmdb.Movie = new NodeType("movie", "credits", "title", "posters");
     tmdb.Person = new NodeType("person", "movie_credits", "name", "profiles");
-
+    //Declaracion de el objeto Nodo y sus  prototipos
     var Node = (function () {
     	console.log('entra a 3');
         function Node(type, id) {
@@ -55,7 +57,7 @@ var tmdb;
         return Node;
     })();
     tmdb.Node = Node;
-
+    //Declaracion de el objeto Edge y sus prototipos
     var Edge = (function () {
     	console.log('entra a 4');
         function Edge(source, target) {
@@ -70,6 +72,7 @@ var tmdb;
         return Edge;
     })();
     tmdb.Edge = Edge;
+    //funcion que hace el yamado al api de peliculas y trae la informacion
     function request(type, id, content, append) {
     	console.log('entra a A con: '+type + '   '+id +'   '+content + '   '+append);
         if (typeof content === "undefined") { content = null; }
@@ -85,6 +88,7 @@ var tmdb;
         //console.log($.get(query));
         return $.get(query);
     }
+    //Se declara la clase Graph donde se declara dos arreglos uno de nodes y uno de edges, ademas se definen unos prototipos
     var Graph = (function () {
     	console.log('entra a 7');
         function Graph() {
@@ -102,6 +106,7 @@ var tmdb;
                     f(v);
                 });
             });
+            //No ententi hay que revizar
             var d = $.Deferred();
             $.when.apply($, dn).then(function () {
                 var neighbours = Array.prototype.slice.call(arguments);
