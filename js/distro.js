@@ -1,8 +1,53 @@
 ///<reference path="../extern/jquery.d.ts"/>
 var tmdb;
 (function (tmdb) {
+    //Declaracion de el objeto NodeType y sus prototipos
+    var nodoOlinguito=
+        {
+            "id": "1",
+            "type": 1,
+            "name": "Olinguito",
+            "image": "https://avatars2.githubusercontent.com/u/8237020?v=3&s=200",
+            "relations": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1
+                }
+            ],
+            "article": false
+        };
+var nodoOvalle={
+            "id": "2",
+            "type": 2,
+            "name": "Ovalle",
+            "image": "https://avatars1.githubusercontent.com/u/6756995?v=3&s=40",
+            "relations": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 2
+                },
+                {
+                    "id": 4
+                },
+                {
+                    "id": 5
+                }
+            ],
+            "article": false
+        };
+//alert(nodoOvalle.id);   
     var NodeType = (function () {
-    	console.log('entra a 1');
+        console.log('entra a 1');
         function NodeType(type, credits, label, imagesarray) {
             this.type = type;
             this.credits = credits;
@@ -23,19 +68,21 @@ var tmdb;
         return NodeType;
     })();
     tmdb.NodeType = NodeType;
-	console.log('entra a 2');
+    console.log('entra a 2');
+    //Creacion de dos tipos de nodo Movie and Person
     tmdb.Movie = new NodeType("movie", "credits", "title", "posters");
     tmdb.Person = new NodeType("person", "movie_credits", "name", "profiles");
 
+    //Declaracion de el objeto Nodo y sus  prototipos
     var Node = (function () {
-    	console.log('entra a 3');
+        console.log('entra a 3');
         function Node(type, id) {
             this.type = type;
             this.id = id;
             this.degree = 0;
         }
         Node.prototype.name = function () {
-        	//console.log(this.type + this.id.toString());
+            //console.log(this.type + this.id.toString());
             return this.type + this.id.toString(); // Este es el nombre del nodo
         };
         Node.prototype.getImage = function () {
@@ -55,23 +102,24 @@ var tmdb;
         return Node;
     })();
     tmdb.Node = Node;
-
+    //Declaracion de el objeto Edge y sus prototipos
     var Edge = (function () {
-    	console.log('entra a 4');
+        console.log('entra a 4');
         function Edge(source, target) {
-        	console.log('entra a 5');
+            console.log('entra a 5');
             this.source = source;
             this.target = target;
         }
         Edge.prototype.toString = function () {
-        	
+            
             return this.source + '-' + this.target;
         };
         return Edge;
     })();
     tmdb.Edge = Edge;
+    //funcion que hace el llamado al api de peliculas y trae la informacion
     function request(type, id, content, append) {
-    	console.log('entra a A con: '+type + '   '+id +'   '+content + '   '+append);
+        console.log('entra a A con: '+type + '   '+id +'   '+content + '   '+append);
         if (typeof content === "undefined") { content = null; }
         if (typeof append === "undefined") { append = null; }
         var query = "https://api.themoviedb.org/3/" + type + "/" + id;
@@ -85,15 +133,16 @@ var tmdb;
         //console.log($.get(query));
         return $.get(query);
     }
+    //Se declara la clase Graph donde se declara dos arreglos uno de nodes y uno de edges, ademas se definen unos prototipos
     var Graph = (function () {
-    	console.log('entra a 7');
+        console.log('entra a 7');
         function Graph() {
             this.nodes = {};
             this.edges = {};
         }
         Graph.prototype.expandNeighbours = function (node, f) {
-        	console.log('entra a 8');
-        	console.log('expandiendo vecinos:'+node +' '+f)
+            console.log('entra a 8');
+            console.log('expandiendo vecinos:'+node +' '+f)
             var _this = this;
             var dn = node.cast.map(function (c) {
                 return _this.getNode(node.type.next(), c.id, function (v) {
@@ -102,6 +151,7 @@ var tmdb;
                     f(v);
                 });
             });
+            //No ententi hay que revizar
             var d = $.Deferred();
             $.when.apply($, dn).then(function () {
                 var neighbours = Array.prototype.slice.call(arguments);
@@ -110,19 +160,19 @@ var tmdb;
             return d.promise();
         };
         Graph.prototype.fullyExpanded = function (node) {
-        	console.log('entra a 9');
+            console.log('entra a 9');
             var _this = this;
             return node.cast && node.cast.every(function (v) {
                 return (node.type.next() + v.id) in _this.nodes;
             });
         };
         Graph.prototype.addNode = function (type, id) {
-        	console.log('entra a 10');
+            console.log('entra a 10');
             var node = new Node(type, id);
             return this.nodes[node.name()] = node;
         };
         Graph.prototype.getNode = function (type, id, f) {
-        	console.log('entra a 11');
+            console.log('entra a 11');
             var _this = this;
             var d = $.Deferred();
             var name = type + id.toString();
@@ -145,13 +195,36 @@ var tmdb;
             return d.promise();
         };
         Graph.prototype.addEdge = function (u, v) {
-        	console.log('entra a 12');
+            console.log('entra a 12');
             var edge = u.type.makeEdge(u.name(), v.name());
             var ename = edge.toString();
             if (!(ename in this.edges)) {
                 this.edges[ename] = edge;
             }
             ++u.degree, ++v.degree;
+        };
+        Graph.prototype.getNode2 = function (type, id, f) {
+            console.log('entra a 11');
+            var _this = this;
+            var d = $.Deferred();
+            var name = type + id.toString();
+            if (name in this.nodes) {
+                return this.nodes[name];
+            }
+            var node = this.addNode(type, id);
+            f(node);
+            var cast = request(type, id, null, type.credits);
+            $.when(cast).then(function (c) {
+                node.label = c[type.label];
+                (node.cast = c[type.credits].cast).forEach(function (v) {
+                    var neighbourname = type.next() + v.id.toString();
+                    if (neighbourname in _this.nodes) {
+                        _this.addEdge(node, _this.nodes[neighbourname]);
+                    }
+                });
+                d.resolve(node);
+            });
+            return d.promise();
         };
         return Graph;
     })();

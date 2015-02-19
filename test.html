@@ -112,12 +112,18 @@ body{
     var nodeWidth = 30, nodeHeight = 30;
 
     // get first node 
+    /*
     var d = modelgraph.getNode(tmdb.Person, 819, addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
         refocus(startNode);
     });
-
+    */
+    var d = modelgraph.getNode2(tmdb.Person, 819, addViewNode);
+    $.when(d).then(function (startNode) {
+        addViewNode(startNode);
+        refocus(startNode);
+    });
 
 
     function refocus(focus) {
