@@ -134,6 +134,8 @@ body{
         viewgraph.links = [];
         viewgraph.nodes.forEach(function (v) {
             var fullyExpanded = modelgraph.fullyExpanded(v);
+            //console.log('fullyExpanded resultado:');
+            //console.log(fullyExpanded);
             v.colour = fullyExpanded ? "darkgrey" : dark
             if (!v.cast) return;
         });

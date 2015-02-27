@@ -48,8 +48,8 @@ body{
         height = $(window).height(),
         imageScale = 0.1;
 
-    //var dark = "rgb(61, 61, 61)";
-    var dark = "white";
+    var dark = "rgb(61, 61, 61)";
+    //var dark = "white";
     var d3cola = cola.d3adaptor()
         .linkDistance(80)
         .size([width, height]);
@@ -120,7 +120,7 @@ body{
         refocus(startNode);
     });
     */
-    var d = modelgraph.getNode( 1,tmdb.medium, addViewNode);
+    var d = modelgraph.getNode( "1763628",tmdb.XtraLarge, addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
         refocus(startNode);
@@ -141,6 +141,8 @@ body{
         viewgraph.links = [];
         viewgraph.nodes.forEach(function (v) {
             var fullyExpanded = modelgraph.fullyExpanded(v);
+            //console.log('fullyExpanded resultado:');
+            //console.log(fullyExpanded);
             v.colour = fullyExpanded ? "darkgrey" : dark
             if (!v.cast) return;
         });
@@ -190,15 +192,15 @@ body{
         var d = v.getImage();
         
         $.when(d).then(function (node) {
-             console.log('entra addViewNode para ver la promesa');
-            console.log(node.name());
-            console.log(v.imgurl);
+             //console.log('entra addViewNode para ver la promesa');
+            //console.log(node.name());
+            //console.log(v.imgurl);
             d3.select("#" + node.name()).append("image")
             .attr("transform", "translate(2,2)")
             .attr("xlink:href", function (v) {
                 var url = v.imgurl;
-                console.log('Urlimagen:');
-                console.log(url);
+                //console.log('Urlimagen:');
+                //console.log(url);
                 var simg = this;
                 var img = new Image();
                 img.onload = function () {
