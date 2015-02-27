@@ -85,7 +85,7 @@ var tmdb;
         if (append) {
             query += "&append_to_response=" + append;
         }
-        //console.log($.get(query));
+        console.log(query);
         return $.get(query);
     }
     //Se declara la clase Graph donde se declara dos arreglos uno de nodes y uno de edges, ademas se definen unos prototipos
@@ -123,25 +123,42 @@ var tmdb;
         };
         Graph.prototype.addNode = function (type, id) {
         	console.log('entra a 10');
+
             var node = new Node(type, id);
             return this.nodes[node.name()] = node;
         };
         Graph.prototype.getNode = function (type, id, f) {
         	console.log('entra a 11');
+            
             var _this = this;
             var d = $.Deferred();
+            console.log('_This nodes en get node:');
+            console.log(_this.nodes);
             var name = type + id.toString();
             if (name in this.nodes) {
                 return this.nodes[name];
             }
+
             var node = this.addNode(type, id);
+
+
             f(node);
             var cast = request(type, id, null, type.credits);
             $.when(cast).then(function (c) {
                 node.label = c[type.label];
+                console.log('node.label:');
+                console.log(node.label);
+                console.log('_This nodes  primer cast');
+                 console.log(_this.nodes);
                 (node.cast = c[type.credits].cast).forEach(function (v) {
+                    console.log('node.cast:');
+                    console.log(node.cast);
                     var neighbourname = type.next() + v.id.toString();
+                    console.log('neighbourname:');
+                    console.log(neighbourname);
                     if (neighbourname in _this.nodes) {
+                        console.log('_This nodes if');
+                        console.log(_this.nodes);
                         _this.addEdge(node, _this.nodes[neighbourname]);
                     }
                 });

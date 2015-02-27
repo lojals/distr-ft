@@ -181,11 +181,16 @@ body{
     function addViewNode(v, startpos) {
         v.viewgraphid = viewgraph.nodes.length;
         var d = v.getImage();
+        
         $.when(d).then(function (node) {
+            console.log('entra addViewNode para ver la promesa');
+            console.log(node.name());
             d3.select("#" + node.name()).append("image")
             .attr("transform", "translate(2,2)")
             .attr("xlink:href", function (v) {
                 var url = v.imgurl;
+                console.log('Urlimagen:');
+                console.log(url);
                 var simg = this;
                 var img = new Image();
                 img.onload = function () {

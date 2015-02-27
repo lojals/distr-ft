@@ -42,7 +42,7 @@ body{
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/fullscreen.js"></script>
 <script src="js/cola.v3.min.js"></script>
-<script src="js/distro.js"></script>
+<script src="js/distrito.js"></script>
 <script>
     var width = $(window).width(),
         height = $(window).height(),
@@ -106,7 +106,8 @@ body{
             .attr("transform", "translate(" + zoom.translate() + ") scale(" + zoom.scale() + ")");
     }
 
-    var modelgraph = new tmdb.Graph();
+    
+    var modelgraph = new tmdb.Graph2();
     var viewgraph = { nodes: [], links: [] };
 
     var nodeWidth = 30, nodeHeight = 30;
@@ -119,7 +120,7 @@ body{
         refocus(startNode);
     });
     */
-    var d = modelgraph.getNode2(tmdb.Person, 819, addViewNode);
+    var d = modelgraph.getNode( 1,tmdb.medium, addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
         refocus(startNode);
@@ -187,11 +188,17 @@ body{
     function addViewNode(v, startpos) {
         v.viewgraphid = viewgraph.nodes.length;
         var d = v.getImage();
+        
         $.when(d).then(function (node) {
+             console.log('entra addViewNode para ver la promesa');
+            console.log(node.name());
+            console.log(v.imgurl);
             d3.select("#" + node.name()).append("image")
             .attr("transform", "translate(2,2)")
             .attr("xlink:href", function (v) {
                 var url = v.imgurl;
+                console.log('Urlimagen:');
+                console.log(url);
                 var simg = this;
                 var img = new Image();
                 img.onload = function () {
