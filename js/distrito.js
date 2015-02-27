@@ -24,9 +24,7 @@ var nodoOvalle={
             "name": "Ovalle",
             "image": "https://avatars1.githubusercontent.com/u/6756995?v=3&s=40",
             "relations": [
-                {
-                    "id": 3
-                },
+                
                 {
                     "id": 9
                 },
@@ -84,7 +82,7 @@ var nodoRoberto={
             "article": false
         };
     var nodoDiez={
-        "id": 9,
+        "id": 10,
         "type": 2,
         "name": "Diez",
         "image": "https://avatars1.githubusercontent.com/u/6756998?v=3&s=40",
@@ -94,7 +92,7 @@ var nodoRoberto={
         "article": false
     };
     var nodoOnce={
-        "id": 9,
+        "id": 11,
         "type": 2,
         "name": "Once",
         "image": "https://avatars1.githubusercontent.com/u/6756999?v=3&s=40",
@@ -257,13 +255,25 @@ var nodoRoberto={
             console.log('entra a expande vecinos');
             console.log('expandiendo vecinos:'+node +' '+f)
             var _this = this;
+            /*
             var dn = node.cast.map(function (c) {
                 return _this.getNode(c.id,'hola', function (v) {
-                    v.label = c[v.id];
+                    v.label = 'tag'+v.id;
                     _this.addEdge(node, v);
                     f(v);
                 });
             });
+            */
+            var dn = $.map( node.cast, function(c) {
+            // Do something
+                return _this.getNode(c.id,'hola', function (v) {
+                    v.label = 'tag'+v.id;
+                    _this.addEdge(node, v);
+                    f(v);
+                });
+            });
+
+
             //No ententi hay que revizar
             var d = $.Deferred();
             $.when.apply($, dn).then(function () {

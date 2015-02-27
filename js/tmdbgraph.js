@@ -99,6 +99,7 @@ var tmdb;
         	console.log('entra a 8');
         	console.log('expandiendo vecinos:'+node +' '+f)
             var _this = this;
+
             var dn = node.cast.map(function (c) {
                 return _this.getNode(node.type.next(), c.id, function (v) {
                     v.label = c[v.type.label];
@@ -106,6 +107,8 @@ var tmdb;
                     f(v);
                 });
             });
+            console.log('El dn del cast');
+            console.log(dn);
             //No ententi hay que revizar
             var d = $.Deferred();
             $.when.apply($, dn).then(function () {
@@ -144,6 +147,8 @@ var tmdb;
 
             f(node);
             var cast = request(type, id, null, type.credits);
+            console.log('cast:');
+            console.log(cast);
             $.when(cast).then(function (c) {
                 node.label = c[type.label];
                 console.log('node.label:');

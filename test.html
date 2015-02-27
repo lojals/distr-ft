@@ -48,8 +48,8 @@ body{
         height = $(window).height(),
         imageScale = 0.1;
 
-    var dark = "rgb(61, 61, 61)";
-
+    //var dark = "rgb(61, 61, 61)";
+    var dark = "white";
     var d3cola = cola.d3adaptor()
         .linkDistance(80)
         .size([width, height]);
@@ -172,7 +172,7 @@ body{
                 .attr("rx", 1).attr("ry", 1)
                 .attr("x", 0).attr("y", 0)
                 .attr("width", 10).attr("height", 2)
-                .attr("stroke-color", white)
+                .attr("stroke", "white")
                 .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
                 .on("click", function () { click(v) });
         }
@@ -217,7 +217,7 @@ body{
 
     function click(node) {
         if (node.colour !== dark) return;
-        var focus = modelgraph.getNode(node.type, node.id);
+        var focus = modelgraph.getNode(node.id,'mu');
         refocus(focus);
     }
 
