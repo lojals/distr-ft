@@ -161,6 +161,7 @@ var tmdb;
                     //console.log('node.cast:');
                     //console.log(node.cast);
                     var neighbourname = type.next() + v.id.toString();
+<<<<<<< HEAD
                    /*console.log('neighbourname:');
                     console.log(neighbourname);
                     console.log(_this.nodes);
@@ -168,6 +169,15 @@ var tmdb;
                     if (neighbourname in _this.nodes) {
                         //console.log('Entra el if del vecinos:');
                         //console.log(_this.nodes[neighbourname]);
+=======
+                    console.log('neighbourname:');
+                    console.log(neighbourname);
+                    console.log(_this.nodes);
+                    console.log('El if que no sirve:'  +_this.nodes["person819"] );
+                    if (neighbourname in _this.nodes) {
+                        console.log('Entra el if del vecinos:');
+                        console.log(_this.nodes[neighbourname]);
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
                         _this.addEdge(node, _this.nodes[neighbourname]);
                     }
                 });

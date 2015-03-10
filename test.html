@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
 <!DOCTYPE html>
 
 <html lang="en">
@@ -18,10 +22,17 @@ body{
 }
 
 
+<<<<<<< HEAD
 .node {
   stroke: #fff;
   stroke-width: 1.5px;
 }
+=======
+/*.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}*/
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
 
 .test{
     
@@ -48,6 +59,10 @@ body{
         imageScale = 0.1;
 
     var dark = "rgb(61, 61, 61)";
+<<<<<<< HEAD
+=======
+    //var dark = "white";
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
     var d3cola = cola.d3adaptor()
         .linkDistance(80)
         .size([width, height]);
@@ -110,8 +125,19 @@ body{
 
     var nodeWidth = 30, nodeHeight = 30;
 
+<<<<<<< HEAD
 
 
+=======
+    // get first node 
+    /*
+    var d = modelgraph.getNode(tmdb.Person, 819, addViewNode);
+    $.when(d).then(function (startNode) {
+        addViewNode(startNode);
+        refocus(startNode);
+    });
+    */
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
     var d = modelgraph.getNode( "1763628",tmdb.XtraLarge, addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
@@ -165,7 +191,11 @@ body{
                 .attr("class", "spike")
                 .attr("rx", 1).attr("ry", 1)
                 .attr("x", 0).attr("y", 0)
+<<<<<<< HEAD
                 .attr("width", 15).attr("height", 2)
+=======
+                .attr("width", 10).attr("height", 2)
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
                 .attr("stroke", "white")
                 .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
                 .on("click", function () { click(v) });
@@ -183,6 +213,7 @@ body{
         v.viewgraphid = viewgraph.nodes.length;
         var d = v.getImage();
         
+<<<<<<< HEAD
        $.when(d).then(function (node) {
             console.log('entra addViewNode para ver la promesa');
             console.log(node.name());
@@ -193,13 +224,29 @@ body{
                 var url = v.imgurl;
                 console.log('Urlimagen:');
                 console.log(url);
+=======
+        $.when(d).then(function (node) {
+             //console.log('entra addViewNode para ver la promesa');
+            //console.log(node.name());
+            //console.log(v.imgurl);
+            d3.select("#" + node.name()).append("image")
+            .attr("transform", "translate(2,2)")
+            .attr("xlink:href", function (v) {
+                var url = v.imgurl;
+                //console.log('Urlimagen:');
+                //console.log(url);
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
                 var simg = this;
                 var img = new Image();
                 img.onload = function () {
                     simg.setAttribute("width", nodeWidth - 4); //  Ancho Imagen de Fondo
                     simg.setAttribute("height", nodeHeight - 4); //  Alto Imagen de Fondo
                 }
+<<<<<<< HEAD
                 return img.src = "https://alvarokbzd.files.wordpress.com/2008/10/microsd_w_adapter_1gb.jpg";
+=======
+                return img.src = url;
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
             }).on("click", function() { click(node) })
         });
         if (typeof startpos !== 'undefined') {
@@ -257,6 +304,7 @@ body{
             .attr("rx", 15).attr("ry", 15)  // Radio en X y Y
             .style("stroke-width","1")
             .attr("width", nodeWidth ).attr("height", nodeHeight) // Asignando atributos de ancho y alto del nodo
+<<<<<<< HEAD
             .on("click", function (d) { click(d) });
             //.on("touchend", function (d) { click(d) });
 
@@ -279,6 +327,13 @@ body{
                 return img.src = url;
             }).on("click", function() { click(node) })
 
+=======
+            .on("click", function (d) { click(d) })
+            .on("touchend", function (d) { click(d) });
+        nodeEnter.append("title")
+            .text(function (d) { return d.label; });
+
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
         node.style("fill", function (d) { return d.colour; });
 
         d3cola.on("tick", function () {
@@ -320,4 +375,8 @@ body{
 </script>
     <!--<button onclick="fullScreen(outer[0][0], fullScreenCancel);zoomToFit()">Full screen</button>!-->
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564

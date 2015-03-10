@@ -185,8 +185,13 @@ body{
         var d = v.getImage();
         
         $.when(d).then(function (node) {
+<<<<<<< HEAD
            // console.log('entra addViewNode para ver la promesa');
            // console.log(node.name());
+=======
+            console.log('entra addViewNode para ver la promesa');
+            console.log(node.name());
+>>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
             d3.select("#" + node.name()).append("image")
             .attr("transform", "translate(2,2)")
             .attr("xlink:href", function (v) {
