@@ -151,11 +151,7 @@ var nodoRoberto={
         };
         Node2.prototype.getImage = function () {
 
-<<<<<<< HEAD
-            console.log("Entra aca??");
-=======
-            ////console.log(this.info);
->>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
+
             ////console.log(this.id);
             ////console.log(this.info.image);
             //return $.get(this.info.image);
@@ -166,17 +162,9 @@ var nodoRoberto={
                 _this.imgurl = this.info.image;
                
                 d.resolve(_this);
-<<<<<<< HEAD
-            return d.promise();
-=======
-            
 
             return d.promise();
 
-
-
-
->>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
         };
         Node2.prototype.makeEdge = function (thisName, otherName) {
             //return this === tmdb.Movie ? new Edge2(thisName, otherName) : new Edge2(otherName, thisName);
