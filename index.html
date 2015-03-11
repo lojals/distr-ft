@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -161,7 +160,8 @@ body{
                 rect = new cola.vpsc.Rectangle(0, w, 0, h),
                 vi = rect.rayIntersection(x, y);
             var dview = d3.select("#"+v.name()+"_spikes");
-
+            console.log("el equis");
+                console.log (vi);
             dview.append("circle")
                 .attr("class", "spike")
                 .attr("rx", 1).attr("ry", 1)
@@ -185,13 +185,7 @@ body{
         var d = v.getImage();
         
         $.when(d).then(function (node) {
-<<<<<<< HEAD
-           // console.log('entra addViewNode para ver la promesa');
-           // console.log(node.name());
-=======
-            console.log('entra addViewNode para ver la promesa');
-            console.log(node.name());
->>>>>>> cbb1e5587a1a5fd81e430e435d3d75b59478d564
+
             d3.select("#" + node.name()).append("image")
             .attr("transform", "translate(2,2)")
             .attr("xlink:href", function (v) {

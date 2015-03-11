@@ -1,3 +1,4 @@
+
 var tmdb;
 (function (tmdb) {
     //Declaracion de el objeto NodeType y sus prototipos
@@ -5,14 +6,20 @@ var tmdb;
         {
             "id": "1763628",
             "type": 1,
-            "name": "Olinguito",
-            "image": "https://avatars2.githubusercontent.com/u/8237020?v=3&s=100",
+            "name": "Distrito",
+            "image": "../assets/logo_def.png",
             "relations": [
                 {
-                    "id": 2341312
+                    "id": "2341312"
                 },
                 {
-                    "id": 3567564
+                    "id": "3567564"
+                },
+                {
+                    "id": "3422344"
+                },
+                {
+                    "id": "5634464"
                 }
             ],
             "article": false
@@ -20,19 +27,19 @@ var tmdb;
 var nodoOvalle={
             "id": "2341312",
             "type": 2,
-            "name": "Ovalle",
-            "image": "https://avatars1.githubusercontent.com/u/6756995?v=3&s=40",
+            "name": "bandas",
+            "image": "../assets/circle.png",
             "relations": [
-                
+                {
+                    "id": "8213623"
+                },
                 {
                     "id": "9645747"
                 },
                 {
-                    "id": "1034578"
-                },
-                {
-                    "id": "8213623"
+                    "id":"4534366"
                 }
+
             ],
             "article": false
         };
@@ -42,29 +49,42 @@ var nodoOvalle={
 var nodoRoberto={
             "id": "3567564",
             "type": 2,
-            "name": "Roberto",
-            "image": "https://avatars2.githubusercontent.com/u/7140772?v=3&s=40",
+            "name": "influencias",
+            "image": "../assets/circle.png",
             "relations": [
-                {
-                    "id": "8213623"
-                },
-                {
-                    "id": "9645747"
-                },
+                
+               
                 {
                     "id": "1034578"
                 },
                 {
                     "id": "1135673"
+                },
+
+            ],
+            "article": false
+        };
+
+var nodoProtagonistas={
+            "id": "5634464",
+            "type": 2,
+            "name": "protagonistas",
+            "image": "../assets/circle.png",
+            "relations": [
+                {
+                    "id":"4554334"
+                },
+                {
+                    "id":"6574533"
                 }
             ],
             "article": false
         };
     var nodoOcho={
             "id": "8213623",
-            "type": 2,
-            "name": "Ocho",
-            "image": "https://avatars1.githubusercontent.com/u/6756996?v=3&s=40",
+            "type": 3,
+            "name": "Bastardas Populares",
+            "image": "../assets/circle.png",
             "relations": [
                 
             ],
@@ -72,9 +92,9 @@ var nodoRoberto={
         };
     var nodoNueve={
             "id": "9645747",
-            "type": 2,
-            "name": "Nueve",
-            "image": "https://avatars1.githubusercontent.com/u/6756997?v=3&s=40",
+            "type": 3,
+            "name": "Puras Tradicionales",
+            "image": "../assets/circle.png",
             "relations": [
                 
             ],
@@ -82,9 +102,9 @@ var nodoRoberto={
         };
     var nodoDiez={
         "id": "1034578",
-        "type": 2,
-        "name": "Diez",
-        "image": "https://avatars1.githubusercontent.com/u/6756998?v=3&s=40",
+        "type": 3,
+        "name": "De Allá",
+        "image": "../assets/circle.png",
         "relations": [
             
         ],
@@ -92,38 +112,162 @@ var nodoRoberto={
     };
     var nodoOnce={
         "id": "1135673",
-        "type": 2,
-        "name": "Once",
-        "image": "https://avatars1.githubusercontent.com/u/6756999?v=3&s=40",
+        "type": 3,
+        "name": "De Aquí",
+        "image": "../assets/circle.png",
         "relations": [
             
         ],
         "article": false
     };
-    var misnodos =new Array(nodoOvalle,nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce);
+    var nodoEnlajugada={
+        "id": "4554334",
+        "type": 3,
+        "name": "En la Jugada",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoComba={
+        "id": "4534366",
+        "type": 3,
+        "name": "Comba Jazzera",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoArtistas={
+        "id": "6574533",
+        "type": 3,
+        "name": "artistas",
+        "image": "../assets/circle.png",
+        "relations": [
+            {
+                    "id":"7686788"
+                },
+                {
+                    "id":"3512544"
+                }
+        ],
+        "article": false
+    };
+    var nodoHombres={
+        "id": "3512544",
+        "type": 3,
+        "name": "hombres",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoMujeres={
+        "id": "7686788",
+        "type": 3,
+        "name": "mujeres",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoInstrumentos={
+            "id": "3422344",
+            "type": 2,
+            "name": "instrumentos",
+            "image": "../assets/circle.png",
+            "relations": [
+                {
+                    "id": "3245355"
+                },
+                {
+                    "id": "790005"
+                },
+                {
+                    "id": "5544332"
+                },
+                {
+                    "id": "0423902"
+                }
+            ],
+            "article": false
+        };
+    var nodoCuerda={
+        "id": "3245355",
+        "type": 3,
+        "name": "Cuerda",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoViento={
+        "id": "790005",
+        "type": 3,
+        "name": "Viento",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoPercusion={
+        "id": "5544332",
+        "type": 3,
+        "name": "Percusión",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var nodoElectricos={
+        "id": "0423902",
+        "type": 3,
+        "name": "Eléctricos",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos);
    
     var NodeType2 = (function () {
         //console.log('entra a 1 NodeType');
         //console.log(misnodos);
-        function NodeType2(type,image, relations, article, instruments, influences) {
-            this.type = type;
-            this.image =image;
-            this.relations = relations;
-            this.article = article;
-            this.instruments = instruments;
-            this.influences = influences;
+        function NodeType2() {
+            //this.type = type;
+            //this.image =image;
+            //this.relations = relations;
+            //this.article = article;
+            //this.instruments = instruments;
+            //this.influences = influences;
         }
-        NodeType2.prototype.toString = function () {
-            return this.type;
+        NodeType2.prototype.width = function (type) {
+            var width=0;
+            if (type =="1") width =250;
+            else if (type =="2") width =100;
+            else if(type =="3") width =60;
+            else if(type =="4") width =30;
+            else  width =20;
+            return width;
         };
-
-        NodeType2.prototype.next = function () {
-            return this === tmdb.Movie ? tmdb.Person : tmdb.Movie;
+        NodeType2.prototype.edgeLenght = function (type) {
+            var lenght=0;
+            if (type =="1") lenght =175;
+            else if (type =="2") lenght =100;
+            else if(type =="3") lenght =75;
+            else if(type =="4") lenght =50;
+            else  lenght =20;
+            return lenght;
         };
-
-        NodeType2.prototype.makeEdge = function (thisName, otherName) {
-            return this === tmdb.Movie ? new Edge2(thisName, otherName) : new Edge2(otherName, thisName);
-        };
+        
         return NodeType2;
     })();
     

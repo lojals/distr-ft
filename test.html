@@ -14,7 +14,8 @@ body{
 .background {
     stroke: #ddd;
     stroke-width: 1px;
-    fill: #333;
+    /*fill: #333;*/
+    fill:#78EC1C;
 }
 
 
@@ -59,7 +60,7 @@ body{
     //var dark = "white";
 
     var d3cola = cola.d3adaptor()
-        .linkDistance(80)
+        .linkDistance(function (v) { return sizes.edgeLenght(v.source.info.type); })
         .size([width, height]);
 
     var outer = d3.select("body").append("svg")
@@ -116,6 +117,7 @@ body{
 
     
     var modelgraph = new tmdb.Graph2();
+    var sizes = new tmdb.NodeType2();
     var viewgraph = { nodes: [], links: [] };
 
     var nodeWidth = 30, nodeHeight = 30;
@@ -171,20 +173,25 @@ body{
         var hiddenEdges = v.cast.length + 1 - v.degree;
         var r = 2 * Math.PI / hiddenEdges;
         for (var i = 0; i < hiddenEdges; ++i) {
-            var w = nodeWidth - 6,
-                h = nodeHeight - 6,
+            //console.log ("el tamaño");
+            //console.log(v);
+            //console.log (v.info.type);
+            //console.log (sizes.width(v.type));
+            var w = sizes.width(v.info.type) - 6,
+                h = sizes.width(v.info.type) - 6,
                 x = w / 2 + 25 * Math.cos(r * i),
                 y = h / 2 + 30 * Math.sin(r * i),
                 rect = new cola.vpsc.Rectangle(0, w, 0, h),
                 vi = rect.rayIntersection(x, y);
+               
             var dview = d3.select("#"+v.name()+"_spikes");
-
+            console.log(vi);
             dview.append("circle")
                 .attr("class", "spike")
                 .attr("rx", 1).attr("ry", 1)
                 .attr("x", 0).attr("y", 0)
 
-                .attr("width", 15).attr("height", 2)
+                .attr("width", sizes.width(v.info.type)).attr("height", sizes.width(v.info.type))
 
                 .attr("stroke", "white")
                 .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
@@ -278,9 +285,9 @@ body{
             .attr("transform", "translate(3,3)");
 
         nodeEnter.append("rect")
-            .attr("rx", 15).attr("ry", 15)  // Radio en X y Y
+            .attr("rx", function (d) { sizes.width(d.info.type)/2; }).attr("ry", function (d) { sizes.width(d.info.type)/2; })  // Radio en X y Y
             .style("stroke-width","1")
-            .attr("width", nodeWidth ).attr("height", nodeHeight) // Asignando atributos de ancho y alto del nodo
+            .attr("width", function (d) { sizes.width(d.info.type); }  ).attr("height", function (d) { sizes.width(d.info.type); } ) // Asignando atributos de ancho y alto del nodo
             .on("click", function (d) { click(d) });
             //.on("touchend", function (d) { click(d) });
 
@@ -298,8 +305,8 @@ body{
                 img.onload = function () {
                     simg.setAttribute("x", 2);
                     simg.setAttribute("y", 2);
-                    simg.setAttribute("width", nodeWidth - 4); //  Ancho Imagen de Fondo
-                    simg.setAttribute("height", nodeHeight - 4); //  Alto Imagen de Fondo
+                    simg.setAttribute("width", sizes.width(v.info.type) - 4); //  Ancho Imagen de Fondo
+                    simg.setAttribute("height", sizes.width(v.info.type) - 4); //  Alto Imagen de Fondo
                 }
                 return img.src = url;
             })
@@ -317,16 +324,16 @@ body{
                 return Math.sqrt(dx * dx + dy * dy);
             });
 
-            node.attr("transform", function (d) { return "translate(" + (d.x - nodeWidth/2) + "," + (d.y-nodeHeight/2) + ")"; });
+            node.attr("transform", function (d) { return "translate(" + (d.x - sizes.width(d.info.type)/2) + "," + (d.y-sizes.width(d.info.type)/2) + ")"; });
         });
     }
     function graphBounds() {
         var x = Number.POSITIVE_INFINITY, X=Number.NEGATIVE_INFINITY, y=Number.POSITIVE_INFINITY, Y=Number.NEGATIVE_INFINITY;
         nodesLayer.selectAll(".node").each(function (v) {
-            x = Math.min(x, v.x - nodeWidth / 2);
-            X = Math.max(X, v.x + nodeWidth / 2);
-            y = Math.min(y, v.y - nodeHeight / 2);
-            Y = Math.max(Y, v.y + nodeHeight / 2);
+            x = Math.min(x, v.x - sizes.width(v.info.type) / 2);
+            X = Math.max(X, v.x + sizes.width(v.info.type) / 2);
+            y = Math.min(y, v.y - sizes.width(v.info.type) / 2);
+            Y = Math.max(Y, v.y + sizes.width(v.info.type) / 2);
         });
         return { x: x, X: X, y: y, Y: Y };
     }
