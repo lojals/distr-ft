@@ -90,7 +90,9 @@ var nodoProtagonistas={
             "name": "Bastardas Populares",
             "image": "../assets/circle.png",
             "relations": [
-                
+            {
+                "id": "0423800"
+            }
             ],
             "article": false
         };
@@ -110,7 +112,9 @@ var nodoProtagonistas={
         "name": "De Allá",
         "image": "../assets/circle.png",
         "relations": [
-            
+        {
+            "id": "0423800"
+        }
         ],
         "article": false
     };
@@ -240,7 +244,18 @@ var nodoProtagonistas={
         ],
         "article": false
     };
-    var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos);
+    var hijoDealla={
+        "id": "0423800",
+        "type": 4,
+        "name": "Hijo de Alla",
+        "image": "../assets/circle.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+
+    var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos,hijoDealla);
    
     	//linea de codigo provisional para el factory Nodo
    $rootScope.misnodos=misnodos;
@@ -449,7 +464,7 @@ var nodoProtagonistas={
 
     function click(node) {
         if (node.colour !== dark) return;
-        var focus = modelgraph.getNode(node.id,'mu');
+        var focus = modelgraph.getNode(node.id,'mu',addViewNode);
         refocus(focus);
     }
 
@@ -616,10 +631,10 @@ var nodoProtagonistas={
         //console.log('_This nodes en get node:');
         //console.log(_this.nodes);
         //var name = type + id.toString();
+        
         var name = 'tag'+ id.toString();
         //console.log('_This nodes en get node:');
         //console.log(_this.nodes);
-
         if (name in this.nodes) {
             return this.nodes[name];
         }
@@ -634,12 +649,26 @@ var nodoProtagonistas={
 
         $.when(cast).then(function (c) {
             node.label = node.info.name;
+            //console.log("label: "+ node.label);
+            console.log("Estos nodos: ");
+            console.log(_this.nodes);
+            // mi codifo
             (node.cast = cast).forEach(function (v) {
-                var neighbourname = 'neighbour' + v.id.toString();
+                var neighbourname = 'tag' + v.id.toString();
                 if (neighbourname in _this.nodes) {
                     _this.addEdge(node, _this.nodes[neighbourname]);
                 }
             });
+            // fin ki codigo
+
+            /*
+            (node.cast = cast).forEach(function (v) {
+                var neighbourname = 'tag' + v.id.toString();
+                if (neighbourname in _this.nodes) {
+                    _this.addEdge(node, _this.nodes[neighbourname]);
+                }
+            });
+            */
             d.resolve(node);
         });
         return d.promise();
