@@ -6,34 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Incremental exploration of a large graph</title>
 <style>
-body{
-    margin:0px;
-    padding:0px;
-}
 
-.background {
-    stroke: #ddd;
-    stroke-width: 1px;
-    fill: #333;
-}
-
-
-/*.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}*/
-
-.test{
-    
-      stroke: #ff0000;
-  stroke-width: 1.5px;
-}
-
-.spike {
-    fill: url(#SpikeGradient); 
-    stroke-width: 0;
-    background-color: #000;
-}
 </style>
 </head>
 <body>
@@ -211,7 +184,7 @@ body{
 
     function click(node) {
         if (node.colour !== dark) return;
-        var focus = modelgraph.getNode(node.type, node.id);
+        var focus = modelgraph.getNode(node.type, node.id,addViewNode);
         refocus(focus);
     }
     
