@@ -1,0 +1,84 @@
+.sidebar {
+    -moz-transition: left .1s;
+    -webkit-transition: left .1s;
+    -o-transition: left .1s;
+    transition: left .1s;
+    width: 15em;
+    background: url(../assets/75.png);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -15em;
+}
+
+.slide-out {
+    -moz-transition: left 1s;
+    -webkit-transition: left 1s;
+    -o-transition: left 1s;
+    transition: left 1s;
+    left: 0px;
+    
+}
+/*
+div {
+   text-align: center;
+}
+
+*/
+.snap-drawers {
+    /*
+    background: none repeat scroll 0% 0% #323949;
+    */
+    background: none repeat scroll 0% 0% url(../assets/75.png);   
+
+    color: #EEE;
+    font-family: sans-serif;
+}
+
+
+.snap-drawer h4 {
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0px;
+
+}
+.snap-drawer {
+    color: #EEE;
+}
+.snap-drawer ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+.snap-drawer li > a {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #000;
+    text-decoration: none;
+    color: #CCC;
+    text-indent: 20px;
+
+}
+.snap-drawer .big {
+    background: url(../assets/75.png); 
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #000;
+    text-decoration: none;
+    color: #CCC;
+    text-indent: 20px;
+    width: 17.5em;
+}
+.left{
+    display: inline-block;
+    text-align: right;
+    
+    
+    
+}

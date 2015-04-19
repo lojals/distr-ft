@@ -271,7 +271,10 @@ var nodoProtagonistas={
     
 
 })(tmdb || (tmdb = {}));
-
+    $scope.click = function() {
+        $scope.boolChangeClass = !$scope.boolChangeClass;
+        $scope.$apply();
+    }
 
     	var width = $(window).width(),
         height = $(window).height(),
@@ -285,7 +288,7 @@ var nodoProtagonistas={
         .linkDistance(function (v) { return sizes.edgeLenght(v.source.info.type); })
         .size([width, height]);
 
-    var outer = d3.select("body").append("svg")
+    var outer = d3.select(".graph").append("svg")
         .attr("width", width)
         .attr("height", height)
         .attr("pointer-events", "all");
