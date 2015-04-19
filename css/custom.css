@@ -74,11 +74,10 @@ div {
     color: #CCC;
     text-indent: 20px;
     width: 17.5em;
+    border-radius: 0     10px      10px           0;
 }
 .left{
     display: inline-block;
-    text-align: right;
-    
-    
+    text-align: right;   
     
 }
