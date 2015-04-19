@@ -81,3 +81,9 @@ div {
     text-align: right;   
     
 }
+.customlabel{
+   background: url(../assets/75.png); 
+   width: 5em;
+   height: 5em;
+    
+}

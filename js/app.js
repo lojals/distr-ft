@@ -54,7 +54,7 @@ var nodoRoberto={
             "id": "3567564",
             "type": 2,
             "name": "influencias",
-            "image": "../assets/circle.png",
+            "image": "../assets/botones_influencias/bt_infuencias_incio2.png",
             "relations": [
                 
                
@@ -64,6 +64,12 @@ var nodoRoberto={
                 {
                     "id": "1135673"
                 },
+                {
+                    "id": "1135000"
+                },
+                {
+                    "id": "1135999"
+                }
 
             ],
             "article": false
@@ -73,7 +79,7 @@ var nodoProtagonistas={
             "id": "5634464",
             "type": 2,
             "name": "protagonistas",
-            "image": "../assets/circle.png",
+            "image": "../assets/botones_protagonistas/protagonistas_v2.png",
             "relations": [
                 {
                     "id":"4554334"
@@ -110,7 +116,7 @@ var nodoProtagonistas={
         "id": "1034578",
         "type": 3,
         "name": "De Allá",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_influencias/botones_influencias_tipo_alla.png",
         "relations": [
         {
             "id": "0423800"
@@ -122,7 +128,28 @@ var nodoProtagonistas={
         "id": "1135673",
         "type": 3,
         "name": "De Aquí",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_influencias/botones_influencias_tipo_aca.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+
+    var caribe={
+        "id": "1135000",
+        "type": 3,
+        "name": "Caribe",
+        "image": "../assets/botones_influencias/botones_influencias_tipo_caribe.png",
+        "relations": [
+            
+        ],
+        "article": false
+    };
+    var pacifico={
+        "id": "1135999",
+        "type": 3,
+        "name": "Pacífico",
+        "image": "../assets/botones_influencias/botones_influencias_tipo_pacifico.png",
         "relations": [
             
         ],
@@ -167,7 +194,7 @@ var nodoProtagonistas={
         "id": "3512544",
         "type": 3,
         "name": "hombres",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_protagonistas/protagonistas_TIPO_hombre.png",
         "relations": [
             
         ],
@@ -177,7 +204,7 @@ var nodoProtagonistas={
         "id": "7686788",
         "type": 3,
         "name": "mujeres",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_protagonistas/protagonistas_TIPO_mujer.png",
         "relations": [
             
         ],
@@ -187,7 +214,7 @@ var nodoProtagonistas={
             "id": "3422344",
             "type": 2,
             "name": "instrumentos",
-            "image": "../assets/circle.png",
+            "image": "../assets/botones_instrumentos/bt_instru_inicio.png",
             "relations": [
                 {
                     "id": "3245355"
@@ -208,7 +235,7 @@ var nodoProtagonistas={
         "id": "3245355",
         "type": 3,
         "name": "Cuerda",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_instrumentos/instru_cuerda.png",
         "relations": [
             
         ],
@@ -218,7 +245,7 @@ var nodoProtagonistas={
         "id": "790005",
         "type": 3,
         "name": "Viento",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_instrumentos/instru_viento.png",
         "relations": [
             
         ],
@@ -228,7 +255,7 @@ var nodoProtagonistas={
         "id": "5544332",
         "type": 3,
         "name": "Percusión",
-        "image": "../assets/circle.png",
+        "image": "../assets/botones_instrumentos/instru_percusion.png",
         "relations": [
             
         ],
@@ -237,8 +264,8 @@ var nodoProtagonistas={
     var nodoElectricos={
         "id": "0423902",
         "type": 3,
-        "name": "Eléctricos",
-        "image": "../assets/circle.png",
+        "name": "Electrónicos",
+        "image": "../assets/botones_instrumentos/instru_electronicos.png",
         "relations": [
             
         ],
@@ -255,7 +282,7 @@ var nodoProtagonistas={
         "article": false
     };
 
-    var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos,hijoDealla);
+    var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos,hijoDealla,caribe,pacifico);
    
     	//linea de codigo provisional para el factory Nodo
    $rootScope.misnodos=misnodos;
@@ -294,12 +321,14 @@ var nodoProtagonistas={
         .attr("pointer-events", "all");
 
     var zoom = d3.behavior.zoom();
+        
     outer.append('rect')
         .attr('class', 'background')
         .attr('width', "100%")
         .attr('height', "100%")
         .call(zoom.on("zoom", redraw))
-        .on("dblclick.zoom", zoomToFit);
+        .on("dblclick.zoom", zoomToFit)
+        .on("wheel.zoom", null);    //deshabilitar zoom del mouse    
 
     var defs = outer.append("svg:defs");
 
@@ -519,7 +548,17 @@ var nodoProtagonistas={
         nodeEnter.append("title")
             .text(function (d) { return d.label; });
 
-        nodeEnter.append("text").text(function (d) { return d.label; });
+
+        nodeEnter.append("text")
+        .attr("x", 0)
+    .attr("dy", 0)
+    .attr("text-anchor", "middle").text(function (d) { 
+            if(d.info.type>=3)
+                return d.label; 
+                else return "";
+             }).attr("class","customlabel")
+        
+        ;
 
         nodeEnter.append("image")
 
@@ -809,8 +848,8 @@ var nodoProtagonistas={
     NodeType.prototype.width = function (type) {
         var width=0;
         if (type =="1") width =250;
-        else if (type =="2") width =100;
-        else if(type =="3") width =60;
+        else if (type =="2") width =120;
+        else if(type =="3") width =80;
         else if(type =="4") width =30;
         else  width =20;
         return width;
@@ -818,7 +857,7 @@ var nodoProtagonistas={
     NodeType.prototype.edgeLenght = function (type) {
         var lenght=0;
         if (type =="1") lenght =175;
-        else if (type =="2") lenght =100;
+        else if (type =="2") lenght =120;
         else if(type =="3") lenght =75;
         else if(type =="4") lenght =50;
         else  lenght =20;

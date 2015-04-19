@@ -17,11 +17,18 @@ body{
     stroke: #ddd;
     stroke-width: 1px;
     /*fill: #333;*/
-    fill:#78EC1C;
+    fill:#78EC1C ;
+    
+   /* 
+  background: none;
+   background-image:  url(../assets/background.jpg);*/
+    
 }
 .node {
-  stroke: #fff;
-  stroke-width: 1.5px;
+ /* stroke: #fff;
+  stroke-width: 1.5px;*/
+  font-family: sans-serif;
+  font-weight: bold;
 }
 /*.node {
   stroke: #fff;
@@ -53,7 +60,7 @@ body{
 <script type="text/javascript" src="js/app.js"></script>
 
 </head>
-<body ng-controller="distritoController">
+<body ng-controller="distritoController" >
   <div class="snap-drawers sidebar " ng-class="{'slide-out':boolChangeClass}">
     <div class="snap-drawer">
       <a href class="big" ng-click="click()" style="display: inline-block;">
