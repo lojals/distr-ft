@@ -3,12 +3,6 @@
 	    	  
     .controller('distritoController',function($scope,Graph,$rootScope,NodeType){
 
-
-
-
-
-
-
 var tmdb;
 (function (tmdb) {
     //Declaracion de el objeto NodeType y sus prototipos
@@ -572,109 +566,106 @@ var nodoProtagonistas={
             this.nodes = {};
             this.edges = {};
         }
-        Graph.prototype.expandNeighbours = function (node, f) {
-            //console.log('entra a expande vecinos');
-            //console.log('expandiendo vecinos:'+node +' '+f)
-            var _this = this;
-            /*
-            var dn = node.cast.map(function (c) {
-                return _this.getNode(c.id,'hola', function (v) {
-                    v.label = 'tag'+v.id;
-                    _this.addEdge(node, v);
-                    f(v);
-                });
+    Graph.prototype.expandNeighbours = function (node, f) {
+        //console.log('entra a expande vecinos');
+        //console.log('expandiendo vecinos:'+node +' '+f)
+        var _this = this;
+        /*
+        var dn = node.cast.map(function (c) {
+            return _this.getNode(c.id,'hola', function (v) {
+                v.label = 'tag'+v.id;
+                _this.addEdge(node, v);
+                f(v);
             });
-            */
-            var dn = $.map( node.cast, function(c) {
-            // Do something
-                return _this.getNode(c.id,'hola', function (v) {
-                    v.label = 'tag'+v.id;
-                    _this.addEdge(node, v);
-                    f(v);
-                });
+        });
+        */
+        var dn = $.map( node.cast, function(c) {
+        // Do something
+            return _this.getNode(c.id,'hola', function (v) {
+                v.label = 'tag'+v.id;
+                _this.addEdge(node, v);
+                f(v);
             });
+        });
 
 
-            //No ententi hay que revizar
-            var d = $.Deferred();
-            $.when.apply($, dn).then(function () {
-                var neighbours = Array.prototype.slice.call(arguments);
-                d.resolve(neighbours);
+        //No ententi hay que revizar
+        var d = $.Deferred();
+        $.when.apply($, dn).then(function () {
+            var neighbours = Array.prototype.slice.call(arguments);
+            d.resolve(neighbours);
+        });
+        return d.promise();
+    };
+    Graph.prototype.fullyExpanded = function (node) {
+        //console.log('entra a fullyExpanded');
+        var _this = this;
+        return node.cast && node.cast.every(function (v) {
+            return ( v.id) in _this.nodes;
+        });
+    };
+    Graph.prototype.addNode = function (id, type) {
+        //console.log('entra adiciona Nodo');
+        var node = new Node(id, type);
+        return this.nodes[node.name()] = node;
+    };
+    Graph.prototype.getNode = function (id, type, f) {//aqui vamos
+        //console.log('entra aget node');
+        var _this = this;
+        var d = $.Deferred();
+        //console.log('_This nodes en get node:');
+        //console.log(_this.nodes);
+        //var name = type + id.toString();
+        var name = 'tag'+ id.toString();
+        //console.log('_This nodes en get node:');
+        //console.log(_this.nodes);
+
+        if (name in this.nodes) {
+            return this.nodes[name];
+        }
+        var node = this.addNode(id, type);
+        f(node);
+        //console.log('NOdo antes del cast');
+        //console.log(node);
+        api = new APIRequest;
+        var cast = api.requestSons(node.info.relations,$rootScope.misnodos);
+        //console.log('El cast es:');
+        //console.log(cast);
+
+        $.when(cast).then(function (c) {
+            node.label = node.info.name;
+            (node.cast = cast).forEach(function (v) {
+                var neighbourname = 'neighbour' + v.id.toString();
+                if (neighbourname in _this.nodes) {
+                    _this.addEdge(node, _this.nodes[neighbourname]);
+                }
             });
-            return d.promise();
-        };
-        Graph.prototype.fullyExpanded = function (node) {
-            //console.log('entra a fullyExpanded');
-            var _this = this;
-            return node.cast && node.cast.every(function (v) {
-                return ( v.id) in _this.nodes;
-            });
-        };
-        Graph.prototype.addNode = function (id, type) {
-            //console.log('entra adiciona Nodo');
-            var node = new Node(id, type);
-            return this.nodes[node.name()] = node;
-        };
-        Graph.prototype.getNode = function (id, type, f) {//aqui vamos
-            //console.log('entra aget node');
-            var _this = this;
-            var d = $.Deferred();
-            //console.log('_This nodes en get node:');
-            //console.log(_this.nodes);
-            //var name = type + id.toString();
-            var name = 'tag'+ id.toString();
-            //console.log('_This nodes en get node:');
-            //console.log(_this.nodes);
-
-            if (name in this.nodes) {
-                return this.nodes[name];
-            }
-            var node = this.addNode(id, type);
-            f(node);
-            //console.log('NOdo antes del cast');
-            //console.log(node);
-            api = new APIRequest;
-            var cast = api.requestSons(node.info.relations,$rootScope.misnodos);
-            //console.log('El cast es:');
-            //console.log(cast);
-
-            $.when(cast).then(function (c) {
-                node.label = node.info.name;
-                (node.cast = cast).forEach(function (v) {
-                    var neighbourname = 'neighbour' + v.id.toString();
-                    if (neighbourname in _this.nodes) {
-                        _this.addEdge(node, _this.nodes[neighbourname]);
-                    }
-                });
-                d.resolve(node);
-            });
-            return d.promise();
-        };
-        Graph.prototype.addEdge = function (u, v) {
-            //console.log('entra adiciona edge');
-            var edge = u.makeEdge(u.name(), v.name());
-            var ename = edge.toString();
-            if (!(ename in this.edges)) {
-                this.edges[ename] = edge;
-            }
-            ++u.degree, ++v.degree;
-        };
-        
-        
-
-        return Graph;
-
+            d.resolve(node);
+        });
+        return d.promise();
+    };
+    Graph.prototype.addEdge = function (u, v) {
+        //console.log('entra adiciona edge');
+        var edge = u.makeEdge(u.name(), v.name());
+        var ename = edge.toString();
+        if (!(ename in this.edges)) {
+            this.edges[ename] = edge;
+        }
+        ++u.degree, ++v.degree;
+    };
+    
+    return Graph;
 
 })
 
 .factory('Node',function(APIRequest,Edge,$rootScope){
 
 	function Node(id, type) {
-			var api= new APIRequest();
-            this.info = api.request2(id,$rootScope.misnodos)[0];           
-            this.type = type;
-            this.id = id;
-            this.degree = 0;
+		var api= new APIRequest();
+        this.info = api.request2(id,$rootScope.misnodos)[0];           
+        this.type = type;
+        this.id = id;
+        this.degree = 0;
 
         }
 
@@ -773,36 +764,36 @@ var nodoProtagonistas={
 })
 .factory('NodeType',function(){
 
-        //console.log('entra a 1 NodeType');
-        //console.log(misnodos);
-        function NodeType() {
-            //this.type = type;
-            //this.image =image;
-            //this.relations = relations;
-            //this.article = article;
-            //this.instruments = instruments;
-            //this.influences = influences;
-        }
-        NodeType.prototype.width = function (type) {
-            var width=0;
-            if (type =="1") width =250;
-            else if (type =="2") width =100;
-            else if(type =="3") width =60;
-            else if(type =="4") width =30;
-            else  width =20;
-            return width;
-        };
-        NodeType.prototype.edgeLenght = function (type) {
-            var lenght=0;
-            if (type =="1") lenght =175;
-            else if (type =="2") lenght =100;
-            else if(type =="3") lenght =75;
-            else if(type =="4") lenght =50;
-            else  lenght =20;
-            return lenght;
-        };
-        
-        return NodeType;
+    //console.log('entra a 1 NodeType');
+    //console.log(misnodos);
+    function NodeType() {
+        //this.type = type;
+        //this.image =image;
+        //this.relations = relations;
+        //this.article = article;
+        //this.instruments = instruments;
+        //this.influences = influences;
+    }
+    NodeType.prototype.width = function (type) {
+        var width=0;
+        if (type =="1") width =250;
+        else if (type =="2") width =100;
+        else if(type =="3") width =60;
+        else if(type =="4") width =30;
+        else  width =20;
+        return width;
+    };
+    NodeType.prototype.edgeLenght = function (type) {
+        var lenght=0;
+        if (type =="1") lenght =175;
+        else if (type =="2") lenght =100;
+        else if(type =="3") lenght =75;
+        else if(type =="4") lenght =50;
+        else  lenght =20;
+        return lenght;
+    };
+    
+    return NodeType;
 
 
 })
