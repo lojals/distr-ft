@@ -25,8 +25,13 @@ body{
     
 }
 .node {
- /* stroke: #fff;
-  stroke-width: 1.5px;*/
+  /*
+  stroke: #fff;
+  stroke: black;
+  stroke-width: 0.3px;
+
+  */
+  
   font-family: sans-serif;
   font-weight: bold;
 }
@@ -57,29 +62,11 @@ body{
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/fullscreen/fullscreen.js"></script>
 <script type="text/javascript" src="bower_components/webcola/WebCola/cola.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
 </head>
-<body ng-controller="distritoController" >
-  <div class="snap-drawers sidebar " ng-class="{'slide-out':boolChangeClass}">
-    <div class="snap-drawer">
-      <a href class="big" ng-click="click()" style="display: inline-block;">
-        <div class="left">
-          <i style="margin-left: 5.8em" title="Menu" class="fa fa-bars fa-2x" ></i>
-        </div> 
-      </a>  
-      <ul>
-        <li>
-          <a href=""> Boton 1</a>
-        </li>
-        <li>
-          <a href=""> Boton 2</a>
-        </li>
-      </ul>
-    </div>
-  </div> 
-  <div class="graph">
-    
-  </div>
-</body>
+
+  <ng-view></ng-view>
+
 </html>

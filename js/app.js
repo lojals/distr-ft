@@ -1,7 +1,31 @@
 (function (){
-    var app = angular.module('Distritoapp',[])
+    var app = angular.module('Distritoapp',['ngRoute'])
+    app.config(function($routeProvider) {
+        $routeProvider
+            .when('/main', {
+                templateUrl: 'tpl/main.html',
+                controller: 'distritoController'
+            }).
+            when('/mapa', {
+                templateUrl: 'tpl/mapa.html',
+                controller: 'mapController'
+            }).
+            when('/:idArticle', {
+                templateUrl: 'tpl/article.html',
+                controller: 'articleController',
+                resolve:{}
+            }).
+            otherwise({
+            redirectTo: '/main'
+            });
+    });
+
+    app.run();
+    app.controller('mapController',function($scope){});
+    app.controller('articleController',function($scope){});
+
 	    	  
-    .controller('distritoController',function($scope,Graph,$rootScope,NodeType){
+    app.controller('distritoController',function($scope,Graph,$rootScope,NodeType){
 
 var tmdb;
 (function (tmdb) {
@@ -390,6 +414,7 @@ var nodoProtagonistas={
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
         refocus(startNode);
+        
     });
 
 
@@ -400,7 +425,10 @@ var nodoProtagonistas={
         refreshViewGraph();
         $.when(neighboursExpanded).then(function f() {
             refreshViewGraph();
+            //zoomToFit();
         });
+       
+        
     }
 
     function refreshViewGraph() {
@@ -431,15 +459,23 @@ var nodoProtagonistas={
             //console.log(v);
             //console.log (v.info.type);
             //console.log (sizes.width(v.type));
-            var w = sizes.width(v.info.type) - 6,
-                h = sizes.width(v.info.type) - 6,
-                x = w / 2 + 25 * Math.cos(r * i),
-                y = h / 2 + 30 * Math.sin(r * i),
-                rect = new cola.vpsc.Rectangle(0, w, 0, h),
-                vi = rect.rayIntersection(x, y);
+            //correccion  de w y h
+            var w = sizes.width(v.info.type) - 6;
+            var  h = sizes.width(v.info.type) - 6;
+            //var w = sizes.width(v.info.type) - 6;
+            //var  h = sizes.width(v.info.type) - 6;
+            var  x = w / 2 + 25 * Math.cos(r * i);
+            var  y = h / 2 + 30 * Math.sin(r * i);
+            
+            //var  rect = new cola.vpsc.Rectangle(0, w, 0, h);
+            var  rect = new cola.vpsc.Rectangle(0, 40, 0, 40);
+            var  vi = rect.rayIntersection(x, y);
                
             var dview = d3.select("#"+v.name()+"_spikes");
-            //console.log(vi);
+            //console.log("el equis");
+            //console.log("el w: "+w);
+            //console.log("el h: "+h);
+                //console.log (vi);
             dview.append("circle")
                 .attr("class", "spike")
                 .attr("rx", 1).attr("ry", 1)
@@ -664,6 +700,8 @@ var nodoProtagonistas={
     Graph.prototype.addNode = function (id, type) {
         //console.log('entra adiciona Nodo');
         var node = new Node(id, type);
+        
+
         return this.nodes[node.name()] = node;
     };
     Graph.prototype.getNode = function (id, type, f) {//aqui vamos
@@ -678,6 +716,8 @@ var nodoProtagonistas={
         //console.log('_This nodes en get node:');
         //console.log(_this.nodes);
         if (name in this.nodes) {
+            //_this.addEdge(node, _this.nodes[neighbourname]);
+            //console.log("ya esta el hijo")
             return this.nodes[name];
         }
         var node = this.addNode(id, type);
@@ -686,14 +726,16 @@ var nodoProtagonistas={
         //console.log(node);
         api = new APIRequest;
         var cast = api.requestSons(node.info.relations,$rootScope.misnodos);
-        //console.log('El cast es:');
-        //console.log(cast);
 
+        //console.log('_this.nodes.length:');
+        //console.log(_this.nodes.length);
+
+        
         $.when(cast).then(function (c) {
             node.label = node.info.name;
             //console.log("label: "+ node.label);
-            console.log("Estos nodos: ");
-            console.log(_this.nodes);
+            //console.log("Estos nodos: ");
+            //console.log(_this.nodes);
             // mi codifo
             (node.cast = cast).forEach(function (v) {
                 var neighbourname = 'tag' + v.id.toString();
