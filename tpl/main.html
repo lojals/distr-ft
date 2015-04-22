@@ -23,10 +23,20 @@
             <img  class="thumb" ng-src="../assets/botones_protagonistas/protagonistas_activo.png">
           </a>
         </li>
-      </ul>      
+      </ul>
+      <a href class="outside" ng-click="zoomMore()" style="display: inline-block;">
+        <div class="left">
+          <i style="margin-left: -1.7em" title="Zoom In" class="fa fa-plus fa-2x" ></i>
+        </div> 
+      </a>     
       <a href class="outside" ng-click="fit()" style="display: inline-block;">
         <div class="left">
-          <i style="margin-left: -1.7em" title="FIT" class="fa fa-plus-square fa-2x" ></i>
+          <i style="margin-left: -1.7em" title="Fit" class="fa fa-external-link-square fa-2x" ></i>
+        </div> 
+      </a> 
+      <a href class="outside" ng-click="zoomLess()" style="display: inline-block;">
+        <div class="left">
+          <i style="margin-left: -1.7em" title="Zoom Out" class="fa fa-minus fa-2x" ></i>
         </div> 
       </a> 
     </div>

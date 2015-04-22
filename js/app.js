@@ -324,7 +324,7 @@ var nodoProtagonistas={
 })(tmdb || (tmdb = {}));
     $scope.click = function() {
         $scope.boolChangeClass = !$scope.boolChangeClass;
-        $scope.$apply();
+        //$scope.$apply();
     }
 
         var width = $(window).width(),
@@ -399,6 +399,7 @@ var nodoProtagonistas={
     addGradient("ReverseEdgeGradient", "darkgray", 1, dark, 1);
 
     var vis = outer.append('g');
+
     var edgesLayer = vis.append("g");
     var nodesLayer = vis.append("g");
 
@@ -428,12 +429,36 @@ var nodoProtagonistas={
     });
     */
 
-    var d = modelgraph.getNode( "1763628",tmdb.XtraLarge, addViewNode);
+    var d = modelgraph.getNode( "1763628","tmdb.XtraLarge", addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
+        //Correcion de inicio de centro del grafo
+        
         refocus(startNode);
+         
+        zoom.translate([0,0-100]).scale(1);
+        redraw();
         
     });
+    $scope.zoomLess = function(){
+        if(zoom.scale()>=0.5)zoomCustom(-0.25);
+    };
+    $scope.zoomMore = function(){
+        if(zoom.scale()<=2)zoomCustom(0.25);
+
+    };
+
+    function zoomCustom(factor){
+        var b = graphBounds();
+        var w = b.X - b.x, h = b.Y - b.y;
+        var cw = outer.attr("width"), ch = outer.attr("height");
+        var s = zoom.scale()+factor;
+        var tx = (-b.x * s + (cw / s - w) * s / 2), ty = (-b.y * s + (ch / s - h) * s / 2);
+        zoom.translate([tx, ty]).scale(s);
+        //zoom.scale(zoom.scale()+0.5);
+        redraw();
+
+    };
 
 
     function refocus(focus) {
