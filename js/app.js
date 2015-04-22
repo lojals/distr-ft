@@ -602,18 +602,35 @@ var nodoProtagonistas={
         nodeEnter.append("title")
             .text(function (d) { return d.label; });
 
+        //Label con el nombre
+        nodeEnter.append("rect")
+
+            .attr("x", -25)
+            .attr("y", -30)        
+            .attr('height', "20px")
+            .style('fill', 'black')
+            .attr('width', function(d){
+                if(d.info.type>=3){
+                    var n=d.label.length;
+                if(n<=13)n=n*10;
+                else n=n*9;                
+                return n+"px";
+            }               
+
+            });    
 
         nodeEnter.append("text")
-        .attr("x", 0)
-    .attr("dy", 0)
-    .attr("text-anchor", "middle").text(function (d) { 
+        .attr("x", -20)   
+        .attr("y", -15).text(function (d) { 
+
             if(d.info.type>=3)
                 return d.label; 
                 else return "";
-             }).attr("class","customlabel")
-        
-        ;
 
+             }).
+        attr("class","customlabel")
+        .style("color","white");
+        //Fin label
         nodeEnter.append("image")
 
             .attr("xlink:href", function (v) {
@@ -668,7 +685,9 @@ var nodoProtagonistas={
         zoom.translate([tx, ty]).scale(s);
         redraw(true);
     }
-
+    $scope.fit= function(){
+        zoomToFit();
+    };
 
     })
 .factory('Graph',function(APIRequest,Node,$rootScope){

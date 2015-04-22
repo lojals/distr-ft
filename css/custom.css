@@ -92,3 +92,19 @@ div {
   height: 10em;
 
 }
+
+.snap-drawer .outside {
+    background: url(../assets/75.png); 
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #000;
+    text-decoration: none;
+    color: #CCC;
+    text-indent: 20px;
+    width: 2.5em;
+    border-radius: 0     10px      10px           0;
+    margin-left: 15em;
+}
