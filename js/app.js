@@ -24,7 +24,7 @@
     app.controller('mapController',function($scope){});
     app.controller('articleController',function($scope){});
 
-	    	  
+              
     app.controller('distritoController',function($scope,Graph,$rootScope,NodeType){
 
 var tmdb;
@@ -308,7 +308,7 @@ var nodoProtagonistas={
 
     var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos,hijoDealla,caribe,pacifico);
    
-    	//linea de codigo provisional para el factory Nodo
+        //linea de codigo provisional para el factory Nodo
    $rootScope.misnodos=misnodos;
     
     ////console.log('entra a 2');
@@ -327,7 +327,7 @@ var nodoProtagonistas={
         $scope.$apply();
     }
 
-    	var width = $(window).width(),
+        var width = $(window).width(),
         height = $(window).height(),
         imageScale = 0.1;
 
@@ -353,6 +353,7 @@ var nodoProtagonistas={
                 var simg = this;
                 var img = new Image();
                 img.onload = function () {
+                    simg.setAttribute("preserveAspectRatio","none");
                     simg.setAttribute("width", "100%"); //  Ancho Imagen de Fondo
                     simg.setAttribute("height","100%"); //  Alto Imagen de Fondo
                 }
@@ -672,7 +673,7 @@ var nodoProtagonistas={
     })
 .factory('Graph',function(APIRequest,Node,$rootScope){
 
-	function Graph() {
+    function Graph() {
             this.nodes = {};
             this.edges = {};
         }
@@ -790,8 +791,8 @@ var nodoProtagonistas={
 
 .factory('Node',function(APIRequest,Edge,$rootScope){
 
-	function Node(id, type) {
-		var api= new APIRequest();
+    function Node(id, type) {
+        var api= new APIRequest();
         this.info = api.request2(id,$rootScope.misnodos)[0];           
         this.type = type;
         this.id = id;
@@ -827,23 +828,23 @@ var nodoProtagonistas={
 })
 .factory('APIRequest',function(){
 
-	function APIRequest(){};
+    function APIRequest(){};
 
-	APIRequest.prototype.requestSons= function(sons,nodos) { 
-	    var misnodos=nodos;
-	        var nodesons =[];
-	        for (var i = misnodos.length - 1; i >= 0; i--) {
-	            
-	            for (var j= sons.length - 1; j >= 0; j--) {
-	                if (misnodos[i].id==sons[j].id){
-	                    nodesons.push(misnodos[i]);
-	                };
-	            };
-	        };
-	        return nodesons;
-    	};
+    APIRequest.prototype.requestSons= function(sons,nodos) { 
+        var misnodos=nodos;
+            var nodesons =[];
+            for (var i = misnodos.length - 1; i >= 0; i--) {
+                
+                for (var j= sons.length - 1; j >= 0; j--) {
+                    if (misnodos[i].id==sons[j].id){
+                        nodesons.push(misnodos[i]);
+                    };
+                };
+            };
+            return nodesons;
+        };
     APIRequest.prototype.request2=function(id,nodos) {
-    	var misnodos=nodos;
+        var misnodos=nodos;
         var mynode =[];
         for (var i = misnodos.length - 1; i >= 0; i--) {
                 ////console.log('for'+ i + misnodos[i].id + '='+id);
@@ -878,7 +879,7 @@ var nodoProtagonistas={
 
 })
 .factory('Edge',function(){
-	//console.log('entra a 3 Crea Edge');
+    //console.log('entra a 3 Crea Edge');
     function Edge(source, target) {
         //console.log('edge2');
         this.source = source;
@@ -928,7 +929,7 @@ var nodoProtagonistas={
 
 })
 .factory('taou2',function(){})
-	    	  
-	
+              
+    
 
 })();
