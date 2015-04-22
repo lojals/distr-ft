@@ -10,7 +10,7 @@
                 templateUrl: 'tpl/mapa.html',
                 controller: 'mapController'
             }).
-            when('/:idArticle', {
+            when('/article/:idArticle', {
                 templateUrl: 'tpl/article.html',
                 controller: 'articleController',
                 resolve:{}
@@ -71,8 +71,6 @@ var nodoOvalle={
             ],
             "article": false
         };
-//alert(nodoOvalle.id);   https://avatars2.githubusercontent.com/u/7140772?v=3&s=100
-
 
 var nodoRoberto={
             "id": "3567564",
@@ -311,16 +309,7 @@ var nodoProtagonistas={
         //linea de codigo provisional para el factory Nodo
    $rootScope.misnodos=misnodos;
     
-    ////console.log('entra a 2');
-    //Creacion de dos tipos de nodo Movie and Person
-    //tmdb.Movie = new NodeType2("movie", "credits", "title", "posters");
-    //tmdb.Person = new NodeType2("person", "movie_credits", "name", "profiles");
-    //tmdb.medium = new NodeType2("medium","");
-
    
-    //Se declara la clase Graph donde se declara dos arreglos uno de nodes y uno de edges, ademas se definen unos prototipos
-    
-
 })(tmdb || (tmdb = {}));
     $scope.click = function() {
         $scope.boolChangeClass = !$scope.boolChangeClass;
@@ -362,16 +351,8 @@ var nodoProtagonistas={
 
         .call(zoom.on("zoom", redraw))
         .on("dblclick.zoom", zoomToFit)
-        .on("wheel.zoom", null);
-    /*    
-    outer.append('rect')
-        .attr('class', 'background')
-        .attr('width', "100%")
-        .attr('height', "100%")
-        .call(zoom.on("zoom", redraw))
-        .on("dblclick.zoom", zoomToFit)
-        .on("wheel.zoom", null);    //deshabilitar zoom del mouse    
-    */
+        .on("wheel.zoom", null);  //deshabilitar zoom del mouse  
+   
     var defs = outer.append("svg:defs");
 
     function addGradient(id, colour1, opacity1, colour2, opacity2) {
@@ -416,30 +397,20 @@ var nodoProtagonistas={
     var modelgraph = new Graph();
     var sizes = new NodeType();
     var viewgraph = { nodes: [], links: [] };
-
     var nodeWidth = 30, nodeHeight = 30;
-
-
-    // get first node 
-    /*
-    var d = modelgraph.getNode(tmdb.Person, 819, addViewNode);
-    $.when(d).then(function (startNode) {
-        addViewNode(startNode);
-        refocus(startNode);
-    });
-    */
 
     var d = modelgraph.getNode( "1763628","tmdb.XtraLarge", addViewNode);
     $.when(d).then(function (startNode) {
         addViewNode(startNode);
-        //Correcion de inicio de centro del grafo
-        
         refocus(startNode);
-         
+        //Correcion de inicio de centro del grafo
         zoom.translate([0,0-100]).scale(1);
         redraw();
         
     });
+    $scope.fit= function(){
+        zoomToFit();
+    };
     $scope.zoomLess = function(){
         if(zoom.scale()>=0.5)zoomCustom(-0.25);
     };
@@ -498,15 +469,9 @@ var nodoProtagonistas={
         var hiddenEdges = v.cast.length + 1 - v.degree;
         var r = 2 * Math.PI / hiddenEdges;
         for (var i = 0; i < hiddenEdges; ++i) {
-            //console.log ("el tamaño");
-            //console.log(v);
-            //console.log (v.info.type);
-            //console.log (sizes.width(v.type));
-            //correccion  de w y h
+            
             var w = sizes.width(v.info.type) - 6;
-            var  h = sizes.width(v.info.type) - 6;
-            //var w = sizes.width(v.info.type) - 6;
-            //var  h = sizes.width(v.info.type) - 6;
+            var  h = sizes.width(v.info.type) - 6;            
             var  x = w / 2 + 25 * Math.cos(r * i);
             var  y = h / 2 + 30 * Math.sin(r * i);
             
@@ -515,10 +480,7 @@ var nodoProtagonistas={
             var  vi = rect.rayIntersection(x, y);
                
             var dview = d3.select("#"+v.name()+"_spikes");
-            //console.log("el equis");
-            //console.log("el w: "+w);
-            //console.log("el h: "+h);
-                //console.log (vi);
+           
             dview.append("circle")
                 .attr("class", "spike")
                 .attr("rx", 1).attr("ry", 1)
@@ -545,16 +507,11 @@ var nodoProtagonistas={
         
 
         $.when(d).then(function (node) {
-             //console.log('entra addViewNode para ver la promesa');
-            //console.log(node.name());
-            //console.log(v.imgurl);
+
             d3.select("#" + node.name()).append("image")
             .attr("transform", "translate(2,2)")
             .attr("xlink:href", function (v) {
                 var url = v.imgurl;
-                //console.log('Urlimagen:');
-                //console.log(url);
-
                 var simg = this;
                 var img = new Image();
                 img.onload = function () {
@@ -710,9 +667,7 @@ var nodoProtagonistas={
         zoom.translate([tx, ty]).scale(s);
         redraw(true);
     }
-    $scope.fit= function(){
-        zoomToFit();
-    };
+    
 
     })
 .factory('Graph',function(APIRequest,Node,$rootScope){
@@ -722,8 +677,7 @@ var nodoProtagonistas={
             this.edges = {};
         }
     Graph.prototype.expandNeighbours = function (node, f) {
-        //console.log('entra a expande vecinos');
-        //console.log('expandiendo vecinos:'+node +' '+f)
+       
         var _this = this;
         /*
         var dn = node.cast.map(function (c) {
@@ -769,36 +723,21 @@ var nodoProtagonistas={
     Graph.prototype.getNode = function (id, type, f) {//aqui vamos
         //console.log('entra aget node');
         var _this = this;
-        var d = $.Deferred();
-        //console.log('_This nodes en get node:');
-        //console.log(_this.nodes);
-        //var name = type + id.toString();
-        
+        var d = $.Deferred();               
         var name = 'tag'+ id.toString();
-        //console.log('_This nodes en get node:');
-        //console.log(_this.nodes);
-        if (name in this.nodes) {
-            //_this.addEdge(node, _this.nodes[neighbourname]);
-            //console.log("ya esta el hijo")
+            if (name in this.nodes) {
+           
             return this.nodes[name];
         }
         var node = this.addNode(id, type);
-        f(node);
-        //console.log('NOdo antes del cast');
-        //console.log(node);
+        f(node);       
         api = new APIRequest;
         var cast = api.requestSons(node.info.relations,$rootScope.misnodos);
-
-        //console.log('_this.nodes.length:');
-        //console.log(_this.nodes.length);
-
         
         $.when(cast).then(function (c) {
             node.label = node.info.name;
-            //console.log("label: "+ node.label);
-            //console.log("Estos nodos: ");
-            //console.log(_this.nodes);
-            // mi codifo
+            
+            // mi codigo
             (node.cast = cast).forEach(function (v) {
                 var neighbourname = 'tag' + v.id.toString();
                 if (neighbourname in _this.nodes) {
@@ -849,8 +788,7 @@ var nodoProtagonistas={
         return 'tag'+this.id; // Este es el nombre del nodo
     };
     Node.prototype.getImage = function () {
-        ////console.log(this.id);
-        ////console.log(this.info.image);
+       
         //return $.get(this.info.image);
         var _this = this;
         var d = $.Deferred();
@@ -863,7 +801,7 @@ var nodoProtagonistas={
 
     };
     Node.prototype.makeEdge = function (thisName, otherName) {
-        //return this === tmdb.Movie ? new Edge2(thisName, otherName) : new Edge2(otherName, thisName);
+        
         return new Edge(thisName, otherName) ;
     };       
 
@@ -891,16 +829,15 @@ var nodoProtagonistas={
         var misnodos=nodos;
         var mynode =[];
         for (var i = misnodos.length - 1; i >= 0; i--) {
-                ////console.log('for'+ i + misnodos[i].id + '='+id);
+                
             if (misnodos[i].id==id){
-                ////console.log('entro al if del request');
+                
                     mynode.push(misnodos[i]);
                     break;
                 };
             
         };
-        //console.log('entro al request');
-        //console.log(mynode);
+       
         return mynode;
     };
     APIRequest.prototype.request=function (type, id, content, append) {
@@ -915,7 +852,7 @@ var nodoProtagonistas={
         if (append) {
             query += "&append_to_response=" + append;
         }
-        ////console.log($.get(query));
+       
         return $.get(query);
     }
 
@@ -939,15 +876,8 @@ var nodoProtagonistas={
 })
 .factory('NodeType',function(){
 
-    //console.log('entra a 1 NodeType');
-    //console.log(misnodos);
     function NodeType() {
-        //this.type = type;
-        //this.image =image;
-        //this.relations = relations;
-        //this.article = article;
-        //this.instruments = instruments;
-        //this.influences = influences;
+        
     }
     NodeType.prototype.width = function (type) {
         var width=0;
