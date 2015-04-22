@@ -345,7 +345,24 @@ var nodoProtagonistas={
         .attr("pointer-events", "all");
 
     var zoom = d3.behavior.zoom();
-        
+
+    outer.append("image")
+        .attr("xlink:href",function () {
+                var url = "../assets/background.jpg";
+                
+                var simg = this;
+                var img = new Image();
+                img.onload = function () {
+                    simg.setAttribute("width", "100%"); //  Ancho Imagen de Fondo
+                    simg.setAttribute("height","100%"); //  Alto Imagen de Fondo
+                }
+                return img.src = url;
+            })
+
+        .call(zoom.on("zoom", redraw))
+        .on("dblclick.zoom", zoomToFit)
+        .on("wheel.zoom", null);
+    /*    
     outer.append('rect')
         .attr('class', 'background')
         .attr('width', "100%")
@@ -353,7 +370,7 @@ var nodoProtagonistas={
         .call(zoom.on("zoom", redraw))
         .on("dblclick.zoom", zoomToFit)
         .on("wheel.zoom", null);    //deshabilitar zoom del mouse    
-
+    */
     var defs = outer.append("svg:defs");
 
     function addGradient(id, colour1, opacity1, colour2, opacity2) {
