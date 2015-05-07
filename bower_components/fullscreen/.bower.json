@@ -1,0 +1,14 @@
+{
+  "name": "fullscreen",
+  "homepage": "https://github.com/PM5544/fullScreen",
+  "_release": "c1f581673a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c1f581673a7a28ff9523af8ba68498e89429b711"
+  },
+  "_source": "git://github.com/PM5544/fullScreen.git",
+  "_target": "*",
+  "_originalSource": "fullscreen",
+  "_direct": true
+}
