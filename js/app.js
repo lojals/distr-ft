@@ -10,7 +10,7 @@
                 templateUrl: 'tpl/mapa.html',
                 controller: 'mapController'
             }).
-            when('/article/:idArticle', {
+            when('/article/:idNode', {
                 templateUrl: 'tpl/article.html',
                 controller: 'articleController',
                 resolve:{}
@@ -22,7 +22,13 @@
 
     app.run();
     app.controller('mapController',function($scope){});
-    app.controller('articleController',function($scope){});
+    app.controller('articleController',function($scope, $routeParams){
+      $scope.idnode=$routeParams.idNode;
+      //console.log($routeParams.idNode);
+
+
+
+    });
 
 
     app.controller('distritoController',function($scope,Graph,$rootScope,NodeType){
@@ -1044,7 +1050,17 @@ var nodoProtagonistas={
                 .attr("stroke", "white")
                 .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
                 .on("click", function () { click(v) });
+                
         }
+    }
+    function articleClick(v){
+        
+        if(v.info.article){
+           //window.open("#/article/"+v.id ,'_blank'); 
+           console.log("Url de articulo: #/article/"+v.id );         
+        }
+        else console.log("No hay articulo disponible");
+        //console.log(v);
     }
 
     function unhintNeighbours(v) {
@@ -1132,6 +1148,7 @@ var nodoProtagonistas={
             .style("stroke-width","1")
             .attr("width", function (d) { sizes.width(d.info.type); }  ).attr("height", function (d) { sizes.width(d.info.type); } ) // Asignando atributos de ancho y alto del nodo
             .on("click", function (d) { click(d) });
+            
             //.on("touchend", function (d) { click(d) });
 
         nodeEnter.append("title")
@@ -1180,7 +1197,8 @@ var nodoProtagonistas={
                 }
                 return img.src = url;
             })
-            .on("click", function(node) { click(node) });
+            .on("click", function(node) { click(node) })
+            .on("dblclick", function(d){ articleClick(d) });
 
         node.style("fill", function (d) { return d.colour; });
 
