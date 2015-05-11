@@ -18,11 +18,11 @@ body{
     stroke-width: 1px;
     /*fill: #333;*/
     fill:#78EC1C ;
-    
-   /* 
+
+   /*
   background: none;
    background-image:  url(../assets/background.jpg);*/
-    
+
 }
 .node {
   /*
@@ -31,7 +31,7 @@ body{
   stroke-width: 0.3px;
 
   */
-  
+
   font-family: sans-serif;
   font-weight: bold;
 }
@@ -41,17 +41,35 @@ body{
 }*/
 
 .test{
-    
+
       stroke: #ff0000;
   stroke-width: 1.5px;
 }
 
 .spike {
-    fill: url(#SpikeGradient); 
+    fill: url(#SpikeGradient);
     stroke-width: 0;
     background-color: #000;
 }
+
+.filter-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:100;
+  padding:10px;
+  border-radius:3px;
+  }
+
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
 </style>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+
+
 <link rel="stylesheet" href="css/custom.css">
 <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
@@ -67,7 +85,10 @@ body{
 <script type="text/javascript" src="js/app.js"></script>
 
 </head>
+<ng-view></ng-view>
+<body>
 
-  <ng-view></ng-view>
+</body>
+
 
 </html>

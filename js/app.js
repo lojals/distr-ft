@@ -21,10 +21,78 @@
     });
 
     app.run();
-    app.controller('mapController',function($scope){});
+    app.controller('mapController',function($scope,$http){
+
+      L.mapbox.accessToken = 'pk.eyJ1IjoibG9qYWxzIiwiYSI6IjhPeHF4bzgifQ.hYEX8Na-kEfco8ELkvZkgg';
+      var filters = document.getElementById('filters');
+
+      $http.get('js/events.json').
+        success(function (data) {
+            //var map = L.mapbox.map('map', 'lojals.m5822dki').setView([4.611331355881756,-74.07840728759766], 13);
+            var map = L.mapbox.map('map', 'lojals.m5822dki',{ zoomControl: false });
+
+            //new L.Control.Zoom({ position: 'bottomLeft' }).addTo(map);
+
+            map.featureLayer.on('layeradd', function(e) {
+                var marker = e.layer,
+                    feature = marker.feature;
+
+                marker.setIcon(L.icon(feature.properties.icon));
+            });
+
+            map.featureLayer.on('ready', function() {
+
+              map.featureLayer.setGeoJSON(data)
+
+              var typesObj = {}, types = [];
+              var features = data.features;
+              for (var i = 0; i < features.length; i++) {
+                typesObj[features[i].properties['type']] = true;
+              }
+              for (var k in typesObj)types.push(k);
+
+              var checkboxes = [];
+              for (var i = 0; i < types.length; i++) {
+                var item = filters.appendChild(document.createElement('div'));
+                var checkbox = item.appendChild(document.createElement('input'));
+                var label = item.appendChild(document.createElement('label'));
+                checkbox.type = 'checkbox';
+                checkbox.id = types[i];
+                checkbox.checked = true;
+                label.innerHTML = types[i];
+                label.setAttribute('for', types[i]);
+                checkbox.addEventListener('change', update);
+                checkboxes.push(checkbox);
+              }
+
+              function update() {
+                var enabled = {};
+                for (var i = 0; i < checkboxes.length; i++) {
+                  if (checkboxes[i].checked) enabled[checkboxes[i].id] = true;
+                }
+                map.featureLayer.setFilter(function(feature) {
+                  return (feature.properties['type'] in enabled);
+                });
+              }
+            });
+        }).
+        error(function (data, status) {
+            /*if (status == 404) {
+                $rootScope.timeout = 500000;
+            }*/
+        });
+
+
+
+
+
+
+
+    });
     app.controller('articleController',function($scope, $routeParams){
       $scope.idnode=$routeParams.idNode;
       //console.log($routeParams.idNode);
+
 
 
 
@@ -1050,14 +1118,14 @@ var nodoProtagonistas={
                 .attr("stroke", "white")
                 .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
                 .on("click", function () { click(v) });
-                
+
         }
     }
     function articleClick(v){
-        
+
         if(v.info.article){
-           //window.open("#/article/"+v.id ,'_blank'); 
-           console.log("Url de articulo: #/article/"+v.id );         
+           //window.open("#/article/"+v.id ,'_blank');
+           console.log("Url de articulo: #/article/"+v.id );
         }
         else console.log("No hay articulo disponible");
         //console.log(v);
@@ -1148,7 +1216,7 @@ var nodoProtagonistas={
             .style("stroke-width","1")
             .attr("width", function (d) { sizes.width(d.info.type); }  ).attr("height", function (d) { sizes.width(d.info.type); } ) // Asignando atributos de ancho y alto del nodo
             .on("click", function (d) { click(d) });
-            
+
             //.on("touchend", function (d) { click(d) });
 
         nodeEnter.append("title")

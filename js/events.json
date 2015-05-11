@@ -1,0 +1,81 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7f223c",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "title": "La tienda de pepe",
+        "description":"Severa tienda",
+        "type":"Tienda de discos",
+        "icon": {
+            "iconUrl": "assets/map/shop_pin.png",
+            "iconSize": [64, 100],
+            "iconAnchor": [25, 25],
+            "popupAnchor": [0, -25],
+            "className": "dot"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1,
+          4.659581521313726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7f223c",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "title": "Festival Estereo Picnic",
+        "description":"<a href=\"http://festivalestereopicnic.com\">Web Page</a>",
+        "type":"Festival",
+        "icon": {
+            "iconUrl": "assets/map/fest_pin.png",
+            "iconSize": [64, 100],
+            "iconAnchor": [25, 25],
+            "popupAnchor": [0, -25],
+            "className": "dot"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.15,
+          4.6
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7f223c",
+        "marker-size": "medium",
+        "marker-symbol": "cafe",
+        "title": "El chuzo de la vuelta",
+        "description":"Pola barata y severos toques",
+        "type":"Tarima",
+        "icon": {
+            "iconUrl": "assets/map/scaffold_pin.png",
+            "iconSize": [64, 100],
+            "iconAnchor": [25, 25],
+            "popupAnchor": [0, -25],
+            "className": "dot"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.2,
+          4.6
+        ]
+      }
+    }
+  ],
+  "id": "lojals.m5822dki",
+  "type": "FeatureCollection"
+}
