@@ -10,7 +10,7 @@
         "description":"Severa tienda",
         "type":"Tienda de discos",
         "icon": {
-            "iconUrl": "assets/map/shop_pin.png",
+            "iconUrl": "assets/map/Tienda de discos.png",
             "iconSize": [64, 100],
             "iconAnchor": [25, 25],
             "popupAnchor": [0, -25],
@@ -35,7 +35,7 @@
         "description":"<a href=\"http://festivalestereopicnic.com\">Web Page</a>",
         "type":"Festival",
         "icon": {
-            "iconUrl": "assets/map/fest_pin.png",
+            "iconUrl": "assets/map/Festival.png",
             "iconSize": [64, 100],
             "iconAnchor": [25, 25],
             "popupAnchor": [0, -25],
@@ -60,7 +60,7 @@
         "description":"Pola barata y severos toques",
         "type":"Tarima",
         "icon": {
-            "iconUrl": "assets/map/scaffold_pin.png",
+            "iconUrl": "assets/map/Tarima.png",
             "iconSize": [64, 100],
             "iconAnchor": [25, 25],
             "popupAnchor": [0, -25],

@@ -29,14 +29,40 @@ body{
 }
 
 .filter-ui {
-  background:#fff;
+  background:rgba(51,51,51,0.97);
+  color: #FFF;
   position:absolute;
   top:10px;
+  text-color = #000;
   right:10px;
   z-index:100;
   padding:10px;
-  border-radius:3px;
-  }
+  border-radius:10px;
+}
+
+.filter-ui div{
+  padding:25px;
+}
+
+.img_filter{
+  /*margin: 0px;*/
+  position:absolute;
+  opacity: 0.3;
+}
+
+.active{
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  display:inline-block;
+  width:80px;
+  height:80px;
+  margin:-1px 4px 0 0;
+  vertical-align:middle;
+  opacity: 0;
+  cursor:pointer;
+}
 
 #map {
   position:absolute;

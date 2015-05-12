@@ -29,9 +29,16 @@ angular.module('Distritoapp').controller('mapController',function($scope,$http){
           for (var k in typesObj)types.push(k);
           var checkboxes = [];
           for (var i = 0; i < types.length; i++) {
-            var item = filters.appendChild(document.createElement('div'));
+            var div = document.createElement('div');
+            var item = filters.appendChild(div);
+            var image = div.appendChild(document.createElement('img'));
+            image.src = "../assets/map/"+types[i]+"_ccl.png";
+            image.setAttribute('class', "img_filter");
+            image.setAttribute('ng-class', "{ active: "+types[i].replace(/ /g,'')+" }");
+            image.class = "img_filter";
             var checkbox = item.appendChild(document.createElement('input'));
             var label = item.appendChild(document.createElement('label'));
+            checkbox.setAttribute('ng-model', types[i].replace(/ /g,''));
             checkbox.type = 'checkbox';
             checkbox.id = types[i];
             checkbox.checked = true;
