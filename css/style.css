@@ -10,32 +10,15 @@ body{
     stroke: #ddd;
     stroke-width: 1px;
     /*fill: #333;*/
-    fill:#78EC1C ;
-
-   /*
-  background: none;
-   background-image:  url(../assets/background.jpg);*/
-
+    fill:#78EC1C;
 }
 .node {
-  /*
-  stroke: #fff;
-  stroke: black;
-  stroke-width: 0.3px;
-
-  */
-
   font-family: sans-serif;
   font-weight: bold;
 }
-/*.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}*/
 
 .test{
-
-      stroke: #ff0000;
+  stroke: #ff0000;
   stroke-width: 1.5px;
 }
 
@@ -55,5 +38,10 @@ body{
   border-radius:3px;
   }
 
-
-#map { position:absolute; top:0; bottom:0; width:100%; }
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+  z-index: 40;
+}

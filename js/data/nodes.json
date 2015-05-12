@@ -1216,7 +1216,7 @@
       "id": "a6",
       "type": 4,
       "name": "Damián Ponce",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Damian_Ponce.png",
       "relations": [],
       "article": false
     },
@@ -1224,7 +1224,7 @@
       "id": "a7",
       "type": 4,
       "name": "César Quevedo",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Cesar_Quevedo.png",
       "relations": [],
       "article": true
     },
@@ -1232,7 +1232,7 @@
       "id": "a8",
       "type": 4,
       "name": "Alejandro Forero",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Alejandro_forero.png",
       "relations": [],
       "article": false
     },
@@ -1272,7 +1272,7 @@
       "id": "a13",
       "type": 4,
       "name": "Alejandro Pérez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Alejandro_perez.png",
       "relations": [],
       "article": false
     },
@@ -1288,7 +1288,7 @@
       "id": "a15",
       "type": 4,
       "name": "Diego Sánchez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Diego_sanchez.png",
       "relations": [],
       "article": false
     },
@@ -1416,7 +1416,7 @@
       "id": "a31",
       "type": 4,
       "name": "Camilo Velasquez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Camilo_Velazquez.png",
       "relations": [],
       "article": false
     },
@@ -1488,7 +1488,7 @@
       "id": "a40",
       "type": 4,
       "name": "Diego Maldonado",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Diego_Maldonado.png",
       "relations": [],
       "article": true
     },
@@ -1496,7 +1496,7 @@
       "id": "a41",
       "type": 4,
       "name": "Andrés Gualdrón",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Andres_gualdron.png",
       "relations": [],
       "article": true
     },
@@ -1520,7 +1520,7 @@
       "id": "a44",
       "type": 4,
       "name": "Diego Rozo",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Diego_Rozo.png",
       "relations": [],
       "article": false
     },
@@ -1584,7 +1584,7 @@
       "id": "a52",
       "type": 4,
       "name": "Camilo Giraldo ",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Camilo_Giraldo.png",
       "relations": [],
       "article": false
     },
@@ -1592,7 +1592,7 @@
       "id": "a53",
       "type": 4,
       "name": "Carmen Gil Vrolojk",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Carmen_GOl.png",
       "relations": [],
       "article": false
     },
@@ -1664,7 +1664,7 @@
       "id": "a62",
       "type": 4,
       "name": "Alfredito Linares",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Alfredito_linares.png",
       "relations": [],
       "article": false
     },
@@ -1768,7 +1768,7 @@
       "id": "a75",
       "type": 4,
       "name": "Benjamin",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/Benjamin.png",
       "relations": [],
       "article": false
     }

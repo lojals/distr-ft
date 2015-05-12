@@ -36,7 +36,6 @@
 
 
       $scope.click = function() {
-        console.log('Bar?');
         $scope.boolChangeClass = !$scope.boolChangeClass;
       }
 

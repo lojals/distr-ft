@@ -4,6 +4,10 @@ angular.module('Distritoapp').controller('mapController',function($scope,$http){
   L.mapbox.accessToken = 'pk.eyJ1IjoibG9qYWxzIiwiYSI6IjhPeHF4bzgifQ.hYEX8Na-kEfco8ELkvZkgg';
   var filters = document.getElementById('filters');
 
+  $scope.click = function() {
+    $scope.boolChangeClass = !$scope.boolChangeClass;
+  }
+
   $http.get('js/data/events.json').
     success(function (data) {
         //var map = L.mapbox.map('map', 'lojals.m5822dki').setView([4.611331355881756,-74.07840728759766], 13);
