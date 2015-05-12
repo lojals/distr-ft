@@ -1,94 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="Distritoapp">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Distrito Sónico</title>
-<style>
-body{
-    margin:0px ;
-    padding:0px;
-}
-.graph{
-    margin:0px ;
-    padding:0px;
-}
-.background {
-    stroke: #ddd;
-    stroke-width: 1px;
-    /*fill: #333;*/
-    fill:#78EC1C ;
-
-   /*
-  background: none;
-   background-image:  url(../assets/background.jpg);*/
-
-}
-.node {
-  /*
-  stroke: #fff;
-  stroke: black;
-  stroke-width: 0.3px;
-
-  */
-
-  font-family: sans-serif;
-  font-weight: bold;
-}
-/*.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}*/
-
-.test{
-
-      stroke: #ff0000;
-  stroke-width: 1.5px;
-}
-
-.spike {
-    fill: url(#SpikeGradient);
-    stroke-width: 0;
-    background-color: #000;
-}
-
-.filter-ui {
-  background:#fff;
-  position:absolute;
-  top:10px;
-  right:10px;
-  z-index:100;
-  padding:10px;
-  border-radius:3px;
-  }
-
-
-#map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
-
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
-
-
-<link rel="stylesheet" href="css/custom.css">
-<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-
-<script type="text/javascript" src="bower_components/webcola/WebCola/cola.js"></script>
-<script type="text/javascript" src="bower_components/d3/d3.js"></script>
-<script type="text/javascript" src="bower_components/fullscreen/fullscreen.js"></script>
-
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-
-
-<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Distrito Sónico</title>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet'/>
+  <link rel="stylesheet"         href="bower_components/font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript"  src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript"  src="bower_components/webcola/WebCola/cola.js"></script>
+  <script type="text/javascript"  src="bower_components/d3/d3.js"></script>
+  <script type="text/javascript"  src="bower_components/fullscreen/fullscreen.js"></script>
+  <script type="text/javascript"  src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript"  src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript"  src="js/app.js"></script>
+  <script type="text/javascript"  src="js/controllers/map.controller.js"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<ng-view></ng-view>
-<body>
-
-</body>
-
-
+  <body>
+    <ng-view></ng-view>
+  </body>
 </html>

@@ -1,0 +1,1761 @@
+{
+  "data": [
+    {
+      "id": "1763628",
+      "type": 1,
+      "name": "Distrito",
+      "image": "../assets/logo_def.png",
+      "relations": [
+        {
+          "id": "2341312"
+        },
+        {
+          "id": "3567564"
+        },
+        {
+          "id": "3422344"
+        },
+        {
+          "id": "5634464"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "2341312",
+      "type": 2,
+      "name": "bandas",
+      "image": "../assets/circle.png",
+      "relations": [
+        {
+          "id": "8213623"
+        },
+        {
+          "id": "9645747"
+        },
+        {
+          "id": "4534366"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "5634464",
+      "type": 2,
+      "name": "protagonistas",
+      "image": "../assets/botones_protagonistas/protagonistas_v2.png",
+      "relations": [
+        {
+          "id": "4554334"
+        },
+        {
+          "id": "6574533"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "8213623",
+      "type": 3,
+      "name": "Bastardas Populares",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "9645747",
+      "type": 3,
+      "name": "Puras Tradicionales",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "1034578",
+      "type": 3,
+      "name": "De Allá",
+      "image": "../assets/botones_influencias/botones_influencias_tipo_alla.png",
+      "relations": [
+        {
+          "id": "in2"
+        },
+        {
+          "id": "in4"
+        },
+        {
+          "id": "in7"
+        },
+        {
+          "id": "in14"
+        },
+        {
+          "id": "in15"
+        },
+        {
+          "id": "in16"
+        },
+        {
+          "id": "in17"
+        },
+        {
+          "id": "in18"
+        },
+        {
+          "id": "in19"
+        },
+        {
+          "id": "in21"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "1135673",
+      "type": 3,
+      "name": "De Aquí",
+      "image": "../assets/botones_influencias/botones_influencias_tipo_aca.png",
+      "relations": [
+        {
+          "id": "1135000"
+        },
+        {
+          "id": "1135999"
+        },
+        {
+          "id": "in13"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "1135000",
+      "type": 3,
+      "name": "Caribe",
+      "image": "../assets/botones_influencias/botones_influencias_tipo_caribe.png",
+      "relations": [
+        {
+          "id": "in1"
+        },
+        {
+          "id": "in3"
+        },
+        {
+          "id": "in6"
+        },
+        {
+          "id": "in8"
+        },
+        {
+          "id": "in9"
+        },
+        {
+          "id": "in10"
+        },
+        {
+          "id": "in11"
+        },
+        {
+          "id": "in22"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "1135999",
+      "type": 3,
+      "name": "Pacífico",
+      "image": "../assets/botones_influencias/botones_influencias_tipo_pacifico.png",
+      "relations": [
+        {
+          "id": "in5"
+        },
+        {
+          "id": "in12"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "4554334",
+      "type": 3,
+      "name": "En la Jugada",
+      "image": "../assets/circle.png",
+      "relations": [
+        {
+          "id": "35125441"
+        },
+        {
+          "id": "76867881"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "4534366",
+      "type": 3,
+      "name": "Comba Jazzera",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "6574533",
+      "type": 3,
+      "name": "artistas",
+      "image": "../assets/circle.png",
+      "relations": [
+        {
+          "id": "7686788"
+        },
+        {
+          "id": "3512544"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "3512544",
+      "type": 3,
+      "name": "hombres",
+      "image": "../assets/botones_protagonistas/protagonistas_TIPO_hombre.png",
+      "relations": [
+        {
+          "id": "a1"
+        },
+        {
+          "id": "a2"
+        },
+        {
+          "id": "a3"
+        },
+        {
+          "id": "a4"
+        },
+        {
+          "id": "a6"
+        },
+        {
+          "id": "a7"
+        },
+        {
+          "id": "a8"
+        },
+        {
+          "id": "a9"
+        },
+        {
+          "id": "a10"
+        },
+        {
+          "id": "a11"
+        },
+        {
+          "id": "a12"
+        },
+        {
+          "id": "a13"
+        },
+        {
+          "id": "a14"
+        },
+        {
+          "id": "a15"
+        },
+        {
+          "id": "a16"
+        },
+        {
+          "id": "a17"
+        },
+        {
+          "id": "a18"
+        },
+        {
+          "id": "a19"
+        },
+        {
+          "id": "a20"
+        },
+        {
+          "id": "a21"
+        },
+        {
+          "id": "a27"
+        },
+        {
+          "id": "a28"
+        },
+        {
+          "id": "a29"
+        },
+        {
+          "id": "a30"
+        },
+        {
+          "id": "a31"
+        },
+        {
+          "id": "a32"
+        },
+        {
+          "id": "a33"
+        },
+        {
+          "id": "a34"
+        },
+        {
+          "id": "a35"
+        },
+        {
+          "id": "a36"
+        },
+        {
+          "id": "a37"
+        },
+        {
+          "id": "a38"
+        },
+        {
+          "id": "a40"
+        },
+        {
+          "id": "a41"
+        },
+        {
+          "id": "a42"
+        },
+        {
+          "id": "a43"
+        },
+        {
+          "id": "a44"
+        },
+        {
+          "id": "a46"
+        },
+        {
+          "id": "a47"
+        },
+        {
+          "id": "a48"
+        },
+        {
+          "id": "a50"
+        },
+        {
+          "id": "a52"
+        },
+        {
+          "id": "a54"
+        },
+        {
+          "id": "a55"
+        },
+        {
+          "id": "a56"
+        },
+        {
+          "id": "a58"
+        },
+        {
+          "id": "a59"
+        },
+        {
+          "id": "a60"
+        },
+        {
+          "id": "a61"
+        },
+        {
+          "id": "a62"
+        },
+        {
+          "id": "a63"
+        },
+        {
+          "id": "a64"
+        },
+        {
+          "id": "a65"
+        },
+        {
+          "id": "a66"
+        },
+        {
+          "id": "a67"
+        },
+        {
+          "id": "a68"
+        },
+        {
+          "id": "a70"
+        },
+        {
+          "id": "a71"
+        },
+        {
+          "id": "a72"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "7686788",
+      "type": 3,
+      "name": "mujeres",
+      "image": "../assets/botones_protagonistas/protagonistas_TIPO_mujer.png",
+      "relations": [
+        {
+          "id": "a5"
+        },
+        {
+          "id": "a26"
+        },
+        {
+          "id": "a39"
+        },
+        {
+          "id": "a45"
+        },
+        {
+          "id": "a49"
+        },
+        {
+          "id": "a51"
+        },
+        {
+          "id": "a57"
+        },
+        {
+          "id": "a69"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "35125441",
+      "type": 3,
+      "name": "hombres",
+      "image": "../assets/botones_protagonistas/protagonistas_TIPO_hombre.png",
+      "relations": [
+        {
+          "id": "a22"
+        },
+        {
+          "id": "a23"
+        },
+        {
+          "id": "a24"
+        },
+        {
+          "id": "a25"
+        },
+        {
+          "id": "a74"
+        },
+        {
+          "id": "a75"
+        },
+        {
+          "id": "a73"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "76867881",
+      "type": 3,
+      "name": "mujeres",
+      "image": "../assets/botones_protagonistas/protagonistas_TIPO_mujer.png",
+      "relations": [
+        {
+          "id": "a53"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "3422344",
+      "type": 2,
+      "name": "instrumentos",
+      "image": "../assets/botones_instrumentos/bt_instru_inicio.png",
+      "relations": [
+        {
+          "id": "3245355"
+        },
+        {
+          "id": "790005"
+        },
+        {
+          "id": "5544332"
+        },
+        {
+          "id": "0423902"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "3245355",
+      "type": 3,
+      "name": "Cuerda",
+      "image": "../assets/botones_instrumentos/instru_cuerda.png",
+      "relations": [
+        {
+          "id": "ist6"
+        },
+        {
+          "id": "ist11"
+        },
+        {
+          "id": "ist24"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "790005",
+      "type": 3,
+      "name": "Viento",
+      "image": "../assets/botones_instrumentos/instru_viento.png",
+      "relations": [
+        {
+          "id": "ist1"
+        },
+        {
+          "id": "ist2"
+        },
+        {
+          "id": "ist13"
+        },
+        {
+          "id": "ist15"
+        },
+        {
+          "id": "ist16"
+        },
+        {
+          "id": "ist26"
+        },
+        {
+          "id": "ist28"
+        },
+        {
+          "id": "ist29"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "5544332",
+      "type": 3,
+      "name": "Percusión",
+      "image": "../assets/botones_instrumentos/instru_percusion.png",
+      "relations": [
+        {
+          "id": "ist3"
+        },
+        {
+          "id": "ist4"
+        },
+        {
+          "id": "ist8"
+        },
+        {
+          "id": "ist12"
+        },
+        {
+          "id": "ist14"
+        },
+        {
+          "id": "ist18"
+        },
+        {
+          "id": "ist19"
+        },
+        {
+          "id": "ist20"
+        },
+        {
+          "id": "ist21"
+        },
+        {
+          "id": "ist22"
+        },
+        {
+          "id": "ist23"
+        },
+        {
+          "id": "ist25"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "0423902",
+      "type": 3,
+      "name": "Electrónicos",
+      "image": "../assets/botones_instrumentos/instru_electronicos.png",
+      "relations": [
+        {
+          "id": "ist9"
+        },
+        {
+          "id": "ist27"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "ist1",
+      "type": 4,
+      "name": "saxofón",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "ist2",
+      "type": 4,
+      "name": "clarinete",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist3",
+      "type": 4,
+      "name": "bateria",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist4",
+      "type": 4,
+      "name": "timbales",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist5",
+      "type": 4,
+      "name": "guitarra",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist6",
+      "type": 4,
+      "name": "bajo",
+      "image": "../assets/circle.png",
+      "relations": [
+        {
+          "id": "a1"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "ist7",
+      "type": 4,
+      "name": "teclados",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist8",
+      "type": 4,
+      "name": "guacharaca",
+      "image": "../assets/circle.png",
+      "relations": [
+        {
+          "id": "a1"
+        }
+      ],
+      "article": false
+    },
+    {
+      "id": "ist9",
+      "type": 4,
+      "name": "sintetizador",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist10",
+      "type": 4,
+      "name": "organo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist11",
+      "type": 4,
+      "name": "piano",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist12",
+      "type": 4,
+      "name": "bongos",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist13",
+      "type": 4,
+      "name": "trombones",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist14",
+      "type": 4,
+      "name": "congas",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist15",
+      "type": 4,
+      "name": "trompetas",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist16",
+      "type": 4,
+      "name": "gaitas ",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "ist17",
+      "type": 4,
+      "name": "gaita hembra",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist18",
+      "type": 4,
+      "name": "bombo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist19",
+      "type": 4,
+      "name": "marimbas",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "ist20",
+      "type": 4,
+      "name": "tambores ",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "ist21",
+      "type": 4,
+      "name": "tambor alegre",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist22",
+      "type": 4,
+      "name": "tambora",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist23",
+      "type": 4,
+      "name": "maraca",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist24",
+      "type": 4,
+      "name": "contra bajo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist25",
+      "type": 4,
+      "name": "Caja",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist26",
+      "type": 4,
+      "name": "Voz",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist27",
+      "type": 4,
+      "name": "bits",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist28",
+      "type": 4,
+      "name": "flauta",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "ist29",
+      "type": 4,
+      "name": "Acordeón",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b1",
+      "type": 4,
+      "name": "Meridian Brothers",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b2",
+      "type": 4,
+      "name": "Curupira",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b3",
+      "type": 4,
+      "name": "La 33",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b4",
+      "type": 4,
+      "name": "Frente Cumbiero",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b5",
+      "type": 4,
+      "name": "Los pirañas",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b6",
+      "type": 4,
+      "name": "Mula",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b7",
+      "type": 4,
+      "name": "La miniTK del miedo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b8",
+      "type": 4,
+      "name": "Animales blancos",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b9",
+      "type": 4,
+      "name": "Suricato",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b10",
+      "type": 4,
+      "name": "Bituin",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b11",
+      "type": 4,
+      "name": "Retrovisor",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b12",
+      "type": 4,
+      "name": "Ricardo Gallo Cuarteto",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b13",
+      "type": 4,
+      "name": "Ondatrópica",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "b14",
+      "type": 4,
+      "name": "Quantic",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b15",
+      "type": 4,
+      "name": "Sidestepper",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "b16",
+      "type": 4,
+      "name": "Ensamble Polifónico Vallenato",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in1",
+      "type": 4,
+      "name": "Cumbia",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in2",
+      "type": 4,
+      "name": "dub inglés",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in3",
+      "type": 4,
+      "name": "vallenato",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in4",
+      "type": 4,
+      "name": "jazz",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in5",
+      "type": 4,
+      "name": "salsa",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in6",
+      "type": 4,
+      "name": "champeta",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in7",
+      "type": 4,
+      "name": "chicha peruana",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in8",
+      "type": 4,
+      "name": "cumbia sicodélica",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in9",
+      "type": 4,
+      "name": "chalupa",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in10",
+      "type": 4,
+      "name": "fandango",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in11",
+      "type": 4,
+      "name": "puya",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in12",
+      "type": 4,
+      "name": "currulao",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in13",
+      "type": 4,
+      "name": "joropo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in14",
+      "type": 4,
+      "name": "rap",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in15",
+      "type": 4,
+      "name": "rock",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in16",
+      "type": 4,
+      "name": "funk",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "in17",
+      "type": 4,
+      "name": "metal",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in18",
+      "type": 4,
+      "name": "indie",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in19",
+      "type": 4,
+      "name": "electrónica",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in20",
+      "type": 4,
+      "name": "latin",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in21",
+      "type": 4,
+      "name": "soul",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "in22",
+      "type": 4,
+      "name": "Chandé",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a1",
+      "type": 4,
+      "name": "Mario Galeano",
+      "image": "../assets/circle.png",
+      "relations": [
+        {
+          "id": "ist6"
+        },
+        {
+          "id": "ist8"
+        }
+      ],
+      "article": true
+    },
+    {
+      "id": "a2",
+      "type": 4,
+      "name": "Ebilis Álvarez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a3",
+      "type": 4,
+      "name": "Pedro Ojeda",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a4",
+      "type": 4,
+      "name": "Marco Fajardo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a5",
+      "type": 4,
+      "name": "María Angélica Valencia",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a6",
+      "type": 4,
+      "name": "Damián Ponce",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a7",
+      "type": 4,
+      "name": "César Quevedo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a8",
+      "type": 4,
+      "name": "Alejandro Forero",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a9",
+      "type": 4,
+      "name": "Mauricio Báez ",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a10",
+      "type": 4,
+      "name": "Sergio Mejía",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a11",
+      "type": 4,
+      "name": "Santiago Mejía",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a12",
+      "type": 4,
+      "name": "Guillermo Céliz",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a13",
+      "type": 4,
+      "name": "Alejandro Pérez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a14",
+      "type": 4,
+      "name": "Juan David Fernández",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a15",
+      "type": 4,
+      "name": "Diego Sánchez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a16",
+      "type": 4,
+      "name": "Juan Felipe Cárdenas",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a17",
+      "type": 4,
+      "name": "David Cantillo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a18",
+      "type": 4,
+      "name": "José Miguel Vega",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a19",
+      "type": 4,
+      "name": "Vladimir Romero",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a20",
+      "type": 4,
+      "name": "Roland Nieto",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a21",
+      "type": 4,
+      "name": "Pablo Martínez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a22",
+      "type": 4,
+      "name": "Javier Galavis",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a23",
+      "type": 4,
+      "name": "Ray Fuquen",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a24",
+      "type": 4,
+      "name": "William Flórez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a25",
+      "type": 4,
+      "name": "Carlos Cadena",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a26",
+      "type": 4,
+      "name": "Maria Jose Salgado",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a27",
+      "type": 4,
+      "name": "Urián Sarmiento",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a28",
+      "type": 4,
+      "name": "Jorge Sepulveda",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a29",
+      "type": 4,
+      "name": "Andres Felipe Salazar",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a30",
+      "type": 4,
+      "name": "Juan Sebastian Monsalve",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a31",
+      "type": 4,
+      "name": "Camilo Velasquez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a32",
+      "type": 4,
+      "name": "Ricardo Narvaez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a33",
+      "type": 4,
+      "name": "Mange Valencia",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a34",
+      "type": 4,
+      "name": "Camilo Bartelsman",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a35",
+      "type": 4,
+      "name": "Kike Mendoza",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a36",
+      "type": 4,
+      "name": "Santiago Botero",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a37",
+      "type": 4,
+      "name": "Ricardo Gallo ",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a38",
+      "type": 4,
+      "name": "Nicolás Vallejo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a39",
+      "type": 4,
+      "name": "Lina Tono",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a40",
+      "type": 4,
+      "name": "Diego Maldonado",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a41",
+      "type": 4,
+      "name": "Andrés Gualdrón",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a42",
+      "type": 4,
+      "name": "Santiago Jimenez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a43",
+      "type": 4,
+      "name": "Sergio González ",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a44",
+      "type": 4,
+      "name": "Diego Rozo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a45",
+      "type": 4,
+      "name": "María Mónica Gutierrez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a46",
+      "type": 4,
+      "name": "Kike Harker",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a47",
+      "type": 4,
+      "name": "Sebastián Cifuentes",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a48",
+      "type": 4,
+      "name": "Santiago de Mendoza",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a49",
+      "type": 4,
+      "name": "Juanita Añez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": true
+    },
+    {
+      "id": "a50",
+      "type": 4,
+      "name": "Daniel de Mendoza",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a51",
+      "type": 4,
+      "name": "Valentina Añez",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a52",
+      "type": 4,
+      "name": "Camilo Giraldo ",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a53",
+      "type": 4,
+      "name": "Carmen Gil Vrolojk",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a54",
+      "type": 4,
+      "name": "Juan David Castaño",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a55",
+      "type": 4,
+      "name": "Juan Manuel Toro",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a56",
+      "type": 4,
+      "name": "Vladimir Giraldo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a57",
+      "type": 4,
+      "name": "Nidia Góngora",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a58",
+      "type": 4,
+      "name": "Wilson Viveros",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a59",
+      "type": 4,
+      "name": "Juan Carlos Puello",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a60",
+      "type": 4,
+      "name": "Freddy Colorado",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a61",
+      "type": 4,
+      "name": "Will Holland",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a62",
+      "type": 4,
+      "name": "Alfredito Linares",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a63",
+      "type": 4,
+      "name": "Ramaya",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a64",
+      "type": 4,
+      "name": "Michi Sarmiento",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a65",
+      "type": 4,
+      "name": "Markitos Mikolta",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a66",
+      "type": 4,
+      "name": "Miguel Vega",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a67",
+      "type": 4,
+      "name": "Jorge Gaviria",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a68",
+      "type": 4,
+      "name": "Richard Blair",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a69",
+      "type": 4,
+      "name": "Erika Muñoz",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a70",
+      "type": 4,
+      "name": "Edgardo Garcés",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a71",
+      "type": 4,
+      "name": "Teto Ocampo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a72",
+      "type": 4,
+      "name": "El Chongo",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a73",
+      "type": 4,
+      "name": "Janio Coronado",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a74",
+      "type": 4,
+      "name": "Luis Daniel Vega",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    },
+    {
+      "id": "a75",
+      "type": 4,
+      "name": "Benjamin",
+      "image": "../assets/circle.png",
+      "relations": [],
+      "article": false
+    }
+  ]
+}

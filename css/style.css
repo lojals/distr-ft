@@ -1,0 +1,59 @@
+body{
+    margin:0px ;
+    padding:0px;
+}
+.graph{
+    margin:0px ;
+    padding:0px;
+}
+.background {
+    stroke: #ddd;
+    stroke-width: 1px;
+    /*fill: #333;*/
+    fill:#78EC1C ;
+
+   /*
+  background: none;
+   background-image:  url(../assets/background.jpg);*/
+
+}
+.node {
+  /*
+  stroke: #fff;
+  stroke: black;
+  stroke-width: 0.3px;
+
+  */
+
+  font-family: sans-serif;
+  font-weight: bold;
+}
+/*.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}*/
+
+.test{
+
+      stroke: #ff0000;
+  stroke-width: 1.5px;
+}
+
+.spike {
+    fill: url(#SpikeGradient);
+    stroke-width: 0;
+    background-color: #000;
+}
+
+.filter-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:100;
+  padding:10px;
+  border-radius:3px;
+  }
+
+
+#map { position:absolute; top:0; bottom:0; width:100%; }
