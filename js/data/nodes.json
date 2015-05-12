@@ -22,6 +22,21 @@
       "article": false
     },
     {
+      "id": "3567564",
+      "type": 2,
+      "name": "influencias",
+      "image": "../assets/botones_influencias/bt_infuencias_incio2.png",
+      "relations": [
+        {
+          "id": "1034578"
+        },
+        {
+          "id": "1135673"
+        }
+      ],
+      "article": false
+    },
+    {
       "id": "2341312",
       "type": 2,
       "name": "bandas",

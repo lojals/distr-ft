@@ -28,64 +28,20 @@
     var misnodos;
     $http.get('js/data/nodes.json').
     success(function (data) {
-
       misnodos = data.data;
-
-
-      console.log(misnodos);
-
-
-
       var tmdb;
       (function (tmdb) {
-        //Declaracion de el objeto NodeType y sus prototipos
-
-        // Nodo Principal
-        //var misnodos = new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos,caribe,pacifico,ist1,ist2,ist3,ist4,ist5,ist6,ist7,ist8,ist9,ist10,ist11,ist12,ist13,ist14,ist15,ist16,ist17,ist18,ist19,ist20,ist21,ist22,ist23,ist24,ist25,ist26,ist27,ist28,ist29,ist3,ist4,ist8,ist12,ist14,ist18,ist19,ist20,ist21,ist22,ist23,ist25,ist9,ist27,ist6,ist11,ist24,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in15,in16,in17,in18,in19,in20,in21,in22,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30,a31,a32,a33,a34,a35,a36,a37,a38,a39,a40,a41,a42,a43,a44,a45,a46,a47,a48,a49,a50,a51,a52,a53,a54,a55,a56,a57,a58,a59,a60,a61,a62,a63,a64,a65,a66,a67,a68,a69,a70,a71,a72,a73,a74,a75,nodoHombresJugada,nodoMujeresJugada);
-        //var misnodos =new Array(nodoOvalle, nodoCuerda,nodoViento,nodoPercusion,nodoElectricos, nodoEnlajugada, nodoHombres, nodoComba, nodoMujeres, nodoArtistas, nodoInstrumentos, nodoProtagonistas, nodoOlinguito,nodoRoberto,nodoOcho,nodoNueve,nodoDiez,nodoOnce, nodoInstrumentos,caribe,pacifico,ist1,ist2,ist3,ist4,ist5,ist6,ist7,ist8,ist9,ist10,ist11,ist12,ist13,ist14,ist15,ist16,ist17,ist18,ist19,ist20,ist21,ist22,ist23,ist24,ist25,ist26,ist27,ist28,ist29,ist3,ist4,ist8,ist12,ist14,ist18,ist19,ist20,ist21,ist22,ist23,ist25,ist9,ist27,ist6,ist11,ist24,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in15,in16,in17,in18,in19,in20,in21,in22,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30,a31,a32,a33,a34,a35,a36,a37,a38,a39,a40,a41,a42,a43,a44,a45,a46,a47,a48,a49,a50,a51,a52,a53,a54,a55,a56,a57,a58,a59,a60,a61,a62,a63,a64,a65,a66,a67,a68,a69,a70,a71,a72,a73,a74,a75,nodoHombresJugada,nodoMujeresJugada);
-        //var misnodos
-        //linea de codigo provisional para el factory Nodo
         $rootScope.misnodos=misnodos;
-
-
       })(tmdb || (tmdb = {}));
-
-
-
-
-
-
-
-
-
-
-      console.log('Entra a la funcuion 2');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       $scope.click = function() {
         console.log('Bar?');
         $scope.boolChangeClass = !$scope.boolChangeClass;
-        //$scope.$apply();
       }
 
       var width = $(window).width(), height = $(window).height(), imageScale = 0.1;
-      console.log('Entra a la funcuion 3');
       var dark = "rgb(61, 61, 61)";
-      console.log(2);
       //var dark = "white";
       var d3cola = cola.d3adaptor()
       .linkDistance(function (v) { return sizes.edgeLenght(v.source.info.type); })
@@ -114,11 +70,9 @@
       .call(zoom.on("zoom", redraw))
       .on("dblclick.zoom", zoomToFit)
       .on("wheel.zoom", null);  //deshabilitar zoom del mouse
-      console.log('Entra a la funcuion 4');
       var defs = outer.append("svg:defs");
 
       function addGradient(id, colour1, opacity1, colour2, opacity2) {
-        console.log(1);
         var gradient = defs.append("svg:linearGradient")
         .attr("id", id)
         .attr("x1", "0%")
@@ -146,7 +100,6 @@
 
       var edgesLayer = vis.append("g");
       var nodesLayer = vis.append("g");
-      console.log('Entra a la funcuion 5');
       var nodeMouseDown = false;
 
       function redraw(transition) {
@@ -161,7 +114,7 @@
       var viewgraph = { nodes: [], links: [] };
       var nodeWidth = 30, nodeHeight = 30;
 
-      var d = modelgraph.getNode( "1763628","tmdb.XtraLarge", addViewNode);
+      var d = modelgraph.getNode( "1763628","Main Node", addViewNode);
 
       $.when(d).then(function (startNode) {
         addViewNode(startNode);
@@ -170,8 +123,6 @@
         zoom.translate([0,0-100]).scale(1);
         redraw();
       });
-
-
 
       $scope.fit= function(){
         zoomToFit();
@@ -212,8 +163,6 @@
         viewgraph.links = [];
         viewgraph.nodes.forEach(function (v) {
           var fullyExpanded = modelgraph.fullyExpanded(v);
-          //console.log('fullyExpanded resultado:');
-          //console.log(fullyExpanded);
           v.colour = fullyExpanded ? "darkgrey" : dark
           if (!v.cast) return;
         });
@@ -273,11 +222,7 @@
 
       function addViewNode(v, startpos) {
         v.viewgraphid = viewgraph.nodes.length;
-        console.log('Entra a la funcuio ???');
-
         var d = v.getImage();
-        console.log('Entra a la funcuio ??? X2');
-
         $.when(d).then(function (node) {
 
           d3.select("#" + node.name()).append("image")
@@ -357,8 +302,7 @@
         .text(function (d) { return d.label; });
 
         //Label con el nombre
-        nodeEnter.append("rect")
-
+        /*nodeEnter.append("rect")
         .attr("x", -25)
         .attr("y", -30)
         .attr('height', "20px")
@@ -370,9 +314,9 @@
             else n=n*9;
             return n+"px";
           }
-        });
+        });*/
 
-        nodeEnter.append("text")
+        /*nodeEnter.append("text")
         .attr("x", -20)
         .attr("y", -15).text(function (d) {
 
@@ -382,7 +326,9 @@
 
         }).
         attr("class","customlabel")
-        .style("color","white");
+        .style("color","white");*/
+
+
         //Fin label
         nodeEnter.append("image")
         .attr("xlink:href", function (v) {
@@ -439,26 +385,6 @@
         redraw(true);
       }
 
-      console.log("ultimo");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }).
     error(function (data, status) {
       // Error handler with API connection
@@ -468,7 +394,6 @@
 
   })
   .factory('Graph',function(APIRequest,Node,$rootScope){
-
     function Graph() {
       this.nodes = {};
       this.edges = {};
@@ -476,15 +401,7 @@
     Graph.prototype.expandNeighbours = function (node, f) {
 
       var _this = this;
-      /*
-      var dn = node.cast.map(function (c) {
-      return _this.getNode(c.id,'hola', function (v) {
-      v.label = 'tag'+v.id;
-      _this.addEdge(node, v);
-      f(v);
-    });
-  });
-  */
+
   var dn = $.map( node.cast, function(c) {
     // Do something
     return _this.getNode(c.id,'hola', function (v) {
@@ -503,19 +420,16 @@
   return d.promise();
 };
 Graph.prototype.fullyExpanded = function (node) {
-  //console.log('entra a fullyExpanded');
   var _this = this;
   return node.cast && node.cast.every(function (v) {
     return ( v.id) in _this.nodes;
   });
 };
 Graph.prototype.addNode = function (id, type) {
-  //console.log('entra adiciona Nodo');
   var node = new Node(id, type);
   return this.nodes[node.name()] = node;
 };
 Graph.prototype.getNode = function (id, type, f) {//aqui vamos
-  //console.log('entra aget node');
   var _this = this;
   var d = $.Deferred();
   var name = 'tag'+ id.toString();
@@ -530,30 +444,17 @@ Graph.prototype.getNode = function (id, type, f) {//aqui vamos
 
   $.when(cast).then(function (c) {
     node.label = node.info.name;
-
-    // mi codigo
     (node.cast = cast).forEach(function (v) {
       var neighbourname = 'tag' + v.id.toString();
       if (neighbourname in _this.nodes) {
         _this.addEdge(node, _this.nodes[neighbourname]);
       }
     });
-    // fin ki codigo
-
-    /*
-    (node.cast = cast).forEach(function (v) {
-    var neighbourname = 'tag' + v.id.toString();
-    if (neighbourname in _this.nodes) {
-    _this.addEdge(node, _this.nodes[neighbourname]);
-  }
-});
-*/
-d.resolve(node);
+    d.resolve(node);
 });
 return d.promise();
 };
 Graph.prototype.addEdge = function (u, v) {
-  //console.log('entra adiciona edge');
   var edge = u.makeEdge(u.name(), v.name());
   var ename = edge.toString();
   if (!(ename in this.edges)) {
@@ -578,35 +479,22 @@ return Graph;
   }
 
   Node.prototype.name = function () {
-    ////console.log(this.type + this.id.toString());
     return 'tag'+this.id; // Este es el nombre del nodo
   };
   Node.prototype.getImage = function () {
-
-    //return $.get(this.info.image);
     var _this = this;
-    console.log(_this);
     var d = $.Deferred();
-
     _this.imgurl = this.info.image;
-
     d.resolve(_this);
-
     return d.promise();
-
   };
   Node.prototype.makeEdge = function (thisName, otherName) {
-
     return new Edge(thisName, otherName) ;
   };
-
   return Node;
-
 })
 .factory('APIRequest',function(){
-
   function APIRequest(){};
-  console.log("Esta cosa se ejecuta?");
   APIRequest.prototype.requestSons= function(sons,nodos) {
     var misnodos=nodos;
     var nodesons =[];
@@ -629,50 +517,30 @@ return Graph;
         break;
       };
     };
-    console.log("Esta cosa se ejecuta 2?" + mynode);
     return mynode;
   };
-  APIRequest.prototype.request=function (type, id, content, append) {
-    //console.log('entra a request con: '+type + '   '+id +'   '+content + '   '+append);
-    console.log("Esta mierda se ejecuta 3?");
-    if (typeof content === "undefined") { content = null; }
-    if (typeof append === "undefined") { append = null; }
-    var query = "https://api.themoviedb.org/3/" + type + "/" + id;
-    if (content) {
-      query += "/" + content;
-    }
-    query += "?api_key=1bba0362f468d50d2ec27acff6d5e05a";
-    if (append) {
-      query += "&append_to_response=" + append;
-    }
 
-    return $.get(query);
-  }
   return APIRequest;
 })
 .factory('Edge',function(){
-  //console.log('entra a 3 Crea Edge');
   function Edge(source, target) {
-    //console.log('edge2');
     this.source = source;
     this.target = target;
   }
   Edge.prototype.toString = function () {
-
     return this.source + '-' + this.target;
   };
-
   return Edge;
-
 })
 .factory('NodeType',function(){
   function NodeType() {}
   NodeType.prototype.width = function (type) {
+    //Node Size
     var width=0;
     if (type =="1") width =250;
     else if (type =="2") width =120;
     else if(type =="3") width =80;
-    else if(type =="4") width =30;
+    else if(type =="4") width =80;
     else  width =20;
     return width;
   };
@@ -681,7 +549,7 @@ return Graph;
     if (type =="1") lenght =175;
     else if (type =="2") lenght =120;
     else if(type =="3") lenght =75;
-    else if(type =="4") lenght =50;
+    else if(type =="4") lenght =200;
     else  lenght =20;
     return lenght;
   };
