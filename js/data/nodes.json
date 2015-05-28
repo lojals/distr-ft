@@ -40,17 +40,8 @@
       "id": "2341312",
       "type": 2,
       "name": "bandas",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_bandas/bt_band_inicio.png",
       "relations": [
-        {
-          "id": "8213623"
-        },
-        {
-          "id": "9645747"
-        },
-        {
-          "id": "4534366"
-        }
       ],
       "article": false
     },
@@ -67,22 +58,6 @@
           "id": "6574533"
         }
       ],
-      "article": false
-    },
-    {
-      "id": "8213623",
-      "type": 3,
-      "name": "Bastardas Populares",
-      "image": "../assets/circle.png",
-      "relations": [],
-      "article": false
-    },
-    {
-      "id": "9645747",
-      "type": 3,
-      "name": "Puras Tradicionales",
-      "image": "../assets/circle.png",
-      "relations": [],
       "article": false
     },
     {
@@ -194,7 +169,7 @@
       "id": "4554334",
       "type": 3,
       "name": "En la Jugada",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_protagonistas/en_la_jugada.png",
       "relations": [
         {
           "id": "35125441"
@@ -206,18 +181,10 @@
       "article": false
     },
     {
-      "id": "4534366",
-      "type": 3,
-      "name": "Comba Jazzera",
-      "image": "../assets/circle.png",
-      "relations": [],
-      "article": false
-    },
-    {
       "id": "6574533",
       "type": 3,
       "name": "artistas",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_protagonistas/protagonistas_v7.png",
       "relations": [
         {
           "id": "7686788"
@@ -499,6 +466,9 @@
           "id": "3245355"
         },
         {
+          "id": "3245356"
+        },
+        {
           "id": "790005"
         },
         {
@@ -525,6 +495,15 @@
         {
           "id": "ist24"
         }
+      ],
+      "article": false
+    },
+    {
+      "id": "3245356",
+      "type": 3,
+      "name": "Teclados",
+      "image": "../assets/botones_instrumentos/instru_teclados.png",
+      "relations": [
       ],
       "article": false
     },
@@ -1169,7 +1148,7 @@
       "id": "a1",
       "type": 4,
       "name": "Mario Galeano",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/mario_galeano.png",
       "relations": [
         {
           "id": "ist6"
@@ -1192,7 +1171,7 @@
       "id": "a3",
       "type": 4,
       "name": "Pedro Ojeda",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/pedro_ojeda.png",
       "relations": [],
       "article": true
     },
@@ -1200,7 +1179,7 @@
       "id": "a4",
       "type": 4,
       "name": "Marco Fajardo",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/marco_fajardo.png",
       "relations": [],
       "article": false
     },
@@ -1208,7 +1187,7 @@
       "id": "a5",
       "type": 4,
       "name": "María Angélica Valencia",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/maria_valencia.png",
       "relations": [],
       "article": true
     },
@@ -1216,7 +1195,7 @@
       "id": "a6",
       "type": 4,
       "name": "Damián Ponce",
-      "image": "../assets/faces/Damian_Ponce.png",
+      "image": "../assets/faces/damian_ponce.png",
       "relations": [],
       "article": false
     },
@@ -1224,7 +1203,7 @@
       "id": "a7",
       "type": 4,
       "name": "César Quevedo",
-      "image": "../assets/faces/Cesar_Quevedo.png",
+      "image": "../assets/faces/cesar_quevedo.png",
       "relations": [],
       "article": true
     },
@@ -1232,7 +1211,7 @@
       "id": "a8",
       "type": 4,
       "name": "Alejandro Forero",
-      "image": "../assets/faces/Alejandro_forero.png",
+      "image": "../assets/faces/alejandro_forero.png",
       "relations": [],
       "article": false
     },
@@ -1248,7 +1227,7 @@
       "id": "a10",
       "type": 4,
       "name": "Sergio Mejía",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/sergio_mejia.png",
       "relations": [],
       "article": false
     },
@@ -1272,7 +1251,7 @@
       "id": "a13",
       "type": 4,
       "name": "Alejandro Pérez",
-      "image": "../assets/faces/Alejandro_perez.png",
+      "image": "../assets/faces/alejandro_perez.png",
       "relations": [],
       "article": false
     },
@@ -1280,7 +1259,7 @@
       "id": "a14",
       "type": 4,
       "name": "Juan David Fernández",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juan_david_fernandez.png",
       "relations": [],
       "article": false
     },
@@ -1288,7 +1267,7 @@
       "id": "a15",
       "type": 4,
       "name": "Diego Sánchez",
-      "image": "../assets/faces/Diego_sanchez.png",
+      "image": "../assets/faces/diego_sanchez.png",
       "relations": [],
       "article": false
     },
@@ -1296,7 +1275,7 @@
       "id": "a16",
       "type": 4,
       "name": "Juan Felipe Cárdenas",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juan_felipe_cardenas.png",
       "relations": [],
       "article": false
     },
@@ -1320,7 +1299,7 @@
       "id": "a19",
       "type": 4,
       "name": "Vladimir Romero",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/vladimir_romero.png",
       "relations": [],
       "article": false
     },
@@ -1336,7 +1315,7 @@
       "id": "a21",
       "type": 4,
       "name": "Pablo Martínez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/pablo_martinez.png",
       "relations": [],
       "article": false
     },
@@ -1360,7 +1339,7 @@
       "id": "a24",
       "type": 4,
       "name": "William Flórez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/william_florez.png",
       "relations": [],
       "article": false
     },
@@ -1376,7 +1355,7 @@
       "id": "a26",
       "type": 4,
       "name": "Maria Jose Salgado",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/maria_jose_salgado.png",
       "relations": [],
       "article": false
     },
@@ -1384,7 +1363,7 @@
       "id": "a27",
       "type": 4,
       "name": "Urián Sarmiento",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/urian_sarmiento.png",
       "relations": [],
       "article": false
     },
@@ -1408,7 +1387,7 @@
       "id": "a30",
       "type": 4,
       "name": "Juan Sebastian Monsalve",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juan_sebastian_monsalve.png",
       "relations": [],
       "article": false
     },
@@ -1416,7 +1395,7 @@
       "id": "a31",
       "type": 4,
       "name": "Camilo Velasquez",
-      "image": "../assets/faces/Camilo_Velazquez.png",
+      "image": "../assets/faces/camilo_velazquez.png",
       "relations": [],
       "article": false
     },
@@ -1448,7 +1427,7 @@
       "id": "a35",
       "type": 4,
       "name": "Kike Mendoza",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/kike_mendoza.png",
       "relations": [],
       "article": false
     },
@@ -1472,7 +1451,7 @@
       "id": "a38",
       "type": 4,
       "name": "Nicolás Vallejo",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/nicolas_vallejo.png",
       "relations": [],
       "article": true
     },
@@ -1480,7 +1459,7 @@
       "id": "a39",
       "type": 4,
       "name": "Lina Tono",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/lina_tono.png",
       "relations": [],
       "article": true
     },
@@ -1488,7 +1467,7 @@
       "id": "a40",
       "type": 4,
       "name": "Diego Maldonado",
-      "image": "../assets/faces/Diego_Maldonado.png",
+      "image": "../assets/faces/diego_maldonado.png",
       "relations": [],
       "article": true
     },
@@ -1496,7 +1475,7 @@
       "id": "a41",
       "type": 4,
       "name": "Andrés Gualdrón",
-      "image": "../assets/faces/Andres_gualdron.png",
+      "image": "../assets/faces/andres_gualdron.png",
       "relations": [],
       "article": true
     },
@@ -1512,7 +1491,7 @@
       "id": "a43",
       "type": 4,
       "name": "Sergio González ",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/sergio_gonzalez.png",
       "relations": [],
       "article": false
     },
@@ -1520,7 +1499,7 @@
       "id": "a44",
       "type": 4,
       "name": "Diego Rozo",
-      "image": "../assets/faces/Diego_Rozo.png",
+      "image": "../assets/faces/diego_rozo.png",
       "relations": [],
       "article": false
     },
@@ -1528,7 +1507,7 @@
       "id": "a45",
       "type": 4,
       "name": "María Mónica Gutierrez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/maria_monica_gutierrez.png",
       "relations": [],
       "article": false
     },
@@ -1536,7 +1515,7 @@
       "id": "a46",
       "type": 4,
       "name": "Kike Harker",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/kike_harker.png",
       "relations": [],
       "article": false
     },
@@ -1560,7 +1539,7 @@
       "id": "a49",
       "type": 4,
       "name": "Juanita Añez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juanita_anez.png",
       "relations": [],
       "article": true
     },
@@ -1576,7 +1555,7 @@
       "id": "a51",
       "type": 4,
       "name": "Valentina Añez",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/valentina_anez.png",
       "relations": [],
       "article": false
     },
@@ -1584,7 +1563,7 @@
       "id": "a52",
       "type": 4,
       "name": "Camilo Giraldo ",
-      "image": "../assets/faces/Camilo_Giraldo.png",
+      "image": "../assets/faces/camilo_giraldo.png",
       "relations": [],
       "article": false
     },
@@ -1592,7 +1571,7 @@
       "id": "a53",
       "type": 4,
       "name": "Carmen Gil Vrolojk",
-      "image": "../assets/faces/Carmen_GOl.png",
+      "image": "../assets/faces/carmen_gol.png",
       "relations": [],
       "article": false
     },
@@ -1600,7 +1579,7 @@
       "id": "a54",
       "type": 4,
       "name": "Juan David Castaño",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juan_david_castaño.png",
       "relations": [],
       "article": false
     },
@@ -1608,7 +1587,7 @@
       "id": "a55",
       "type": 4,
       "name": "Juan Manuel Toro",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juan_manuel_toro.png",
       "relations": [],
       "article": false
     },
@@ -1616,7 +1595,7 @@
       "id": "a56",
       "type": 4,
       "name": "Vladimir Giraldo",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/vladimir_giraldo.png",
       "relations": [],
       "article": false
     },
@@ -1624,7 +1603,7 @@
       "id": "a57",
       "type": 4,
       "name": "Nidia Góngora",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/nidia_gongora.png",
       "relations": [],
       "article": false
     },
@@ -1632,7 +1611,7 @@
       "id": "a58",
       "type": 4,
       "name": "Wilson Viveros",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/wilson_viveros.png",
       "relations": [],
       "article": false
     },
@@ -1640,7 +1619,7 @@
       "id": "a59",
       "type": 4,
       "name": "Juan Carlos Puello",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/juan_carlos_puello.png",
       "relations": [],
       "article": false
     },
@@ -1656,7 +1635,7 @@
       "id": "a61",
       "type": 4,
       "name": "Will Holland",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/will_holand.png",
       "relations": [],
       "article": false
     },
@@ -1664,7 +1643,7 @@
       "id": "a62",
       "type": 4,
       "name": "Alfredito Linares",
-      "image": "../assets/faces/Alfredito_linares.png",
+      "image": "../assets/faces/alfredito_linares.png",
       "relations": [],
       "article": false
     },
@@ -1672,7 +1651,7 @@
       "id": "a63",
       "type": 4,
       "name": "Ramaya",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/ramaya.png",
       "relations": [],
       "article": false
     },
@@ -1680,7 +1659,7 @@
       "id": "a64",
       "type": 4,
       "name": "Michi Sarmiento",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/michi_sarmiento.png",
       "relations": [],
       "article": false
     },
@@ -1688,7 +1667,7 @@
       "id": "a65",
       "type": 4,
       "name": "Markitos Mikolta",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/markitos_mikolta.png",
       "relations": [],
       "article": false
     },
@@ -1696,7 +1675,7 @@
       "id": "a66",
       "type": 4,
       "name": "Miguel Vega",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/miguel_vega.png",
       "relations": [],
       "article": false
     },
@@ -1736,7 +1715,7 @@
       "id": "a71",
       "type": 4,
       "name": "Teto Ocampo",
-      "image": "../assets/circle.png",
+      "image": "../assets/faces/teto_ocampo.png",
       "relations": [],
       "article": false
     },
@@ -1768,7 +1747,7 @@
       "id": "a75",
       "type": 4,
       "name": "Benjamin",
-      "image": "../assets/faces/Benjamin.png",
+      "image": "../assets/faces/benjamin.png",
       "relations": [],
       "article": false
     }

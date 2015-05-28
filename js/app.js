@@ -261,7 +261,7 @@
 
         link.enter().append("rect")
         .attr("x", 0).attr("y", 0)
-        .attr("height", 2)
+        .attr("height", 1)
         .attr("class", "link");
 
         link.exit().remove();
@@ -538,7 +538,7 @@ return Graph;
     var width=0;
     if (type =="1") width =250;
     else if (type =="2") width =120;
-    else if(type =="3") width =80;
+    else if(type =="3") width =100;
     else if(type =="4") width =80;
     else  width =20;
     return width;
@@ -547,7 +547,7 @@ return Graph;
     var lenght=0;
     if (type =="1") lenght =175;
     else if (type =="2") lenght =120;
-    else if(type =="3") lenght =75;
+    else if(type =="3") lenght =100;
     else if(type =="4") lenght =200;
     else  lenght =20;
     return lenght;

@@ -19,11 +19,11 @@ body{
 
 .test{
   stroke: #ff0000;
-  stroke-width: 1.5px;
+  stroke-width: 1px;
 }
 
 .spike {
-    fill: url(#SpikeGradient);
+    /*fill: url(#SpikeGradient);*/
     stroke-width: 0;
     background-color: #000;
 }
