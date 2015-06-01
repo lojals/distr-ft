@@ -652,7 +652,32 @@
       "type": 4,
       "name": "saxofón",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a16"
+        },
+        {
+          "id": "a32"
+        },
+        {
+          "id": "a33"
+        },
+        {
+          "id": "a44"
+        },
+        {
+          "id": "a64"
+        },
+        {
+          "id": "a67"
+        },
+        {
+          "id": "a4"
+        },
+        {
+          "id": "a5"
+        }
+      ],
       "article": true
     },
     {
@@ -660,7 +685,11 @@
       "type": 4,
       "name": "clarinete",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a4"
+        }
+      ],
       "article": false
     },
     {
@@ -668,7 +697,23 @@
       "type": 4,
       "name": "bateria",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a48"
+        },
+        {
+          "id": "a6"
+        },
+        {
+          "id": "a28"
+        },
+        {
+          "id": "a3"
+        },
+        {
+          "id": "a34"
+        }
+      ],
       "article": false
     },
     {
@@ -676,7 +721,17 @@
       "type": 4,
       "name": "timbales",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a14"
+        },
+        {
+          "id": "a3"
+        },
+        {
+          "id": "a58"
+        }
+      ],
       "article": false
     },
     {
@@ -684,7 +739,41 @@
       "type": 4,
       "name": "guitarra",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a2"
+        },
+        {
+          "id": "a31"
+        },
+        {
+          "id": "a35"
+        },
+        {
+          "id": "a42"
+        },
+        {
+          "id": "a71"
+        },
+        {
+          "id": "a74"
+        },
+        {
+          "id": "a8"
+        },
+        {
+          "id": "a52"
+        },
+        {
+          "id": "a61"
+        },
+        {
+          "id": "a56"
+        },
+        {
+          "id": "a7"
+        }
+      ],
       "article": false
     },
     {
@@ -695,6 +784,30 @@
       "relations": [
         {
           "id": "a1"
+        },
+        {
+          "id": "a10"
+        },
+        {
+          "id": "a56"
+        },
+        {
+          "id": "a30"
+        },
+        {
+          "id": "a36"
+        },
+        {
+          "id": "a43"
+        },
+        {
+          "id": "a55"
+        },
+        {
+          "id": "a68"
+        },
+        {
+          "id": "a7"
         }
       ],
       "article": false
@@ -724,7 +837,17 @@
       "type": 4,
       "name": "sintetizador",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a2"
+        },
+        {
+          "id": "a5"
+        },
+        {
+          "id": "a37"
+        }
+      ],
       "article": false
     },
     {
@@ -740,7 +863,14 @@
       "type": 4,
       "name": "piano",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a11"
+        },
+        {
+          "id": "a62"
+        }
+      ],
       "article": false
     },
     {
@@ -748,7 +878,11 @@
       "type": 4,
       "name": "bongos",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a15"
+        }
+      ],
       "article": false
     },
     {
@@ -756,7 +890,20 @@
       "type": 4,
       "name": "trombones",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a18"
+        },
+        {
+          "id": "a19"
+        },
+        {
+          "id": "a47"
+        },
+        {
+          "id": "a66"
+        }
+      ],
       "article": false
     },
     {
@@ -764,7 +911,14 @@
       "type": 4,
       "name": "congas",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a13"
+        },
+        {
+          "id": "a59"
+        }
+      ],
       "article": false
     },
     {
@@ -772,7 +926,14 @@
       "type": 4,
       "name": "trompetas",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a67"
+        },
+        {
+          "id": "a20"
+        }
+      ],
       "article": false
     },
     {
@@ -780,7 +941,17 @@
       "type": 4,
       "name": "gaitas ",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a26"
+        },
+        {
+          "id": "a29"
+        },
+        {
+          "id": "a27"
+        }
+      ],
       "article": true
     },
     {
@@ -804,7 +975,11 @@
       "type": 4,
       "name": "marimbas",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a54"
+        }
+      ],
       "article": true
     },
     {
@@ -820,7 +995,14 @@
       "type": 4,
       "name": "tambor alegre",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a60"
+        },
+        {
+          "id": "a59"
+        }
+      ],
       "article": false
     },
     {
@@ -828,7 +1010,14 @@
       "type": 4,
       "name": "tambora",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a54"
+        },
+        {
+          "id": "a3"
+        }
+      ],
       "article": false
     },
     {
@@ -844,7 +1033,17 @@
       "type": 4,
       "name": "contra bajo",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a46"
+        },
+        {
+          "id": "a50"
+        },
+        {
+          "id": "a55"
+        }
+      ],
       "article": false
     },
     {
@@ -852,7 +1051,14 @@
       "type": 4,
       "name": "Caja",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a60"
+        },
+        {
+          "id": "a59"
+        }
+      ],
       "article": false
     },
     {
@@ -860,7 +1066,50 @@
       "type": 4,
       "name": "Voz",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a12"
+        },
+        {
+          "id": "a17"
+        },
+        {
+          "id": "a21"
+        },
+        {
+          "id": "a38"
+        },
+        {
+          "id": "a41"
+        },
+        {
+          "id": "a45"
+        },
+        {
+          "id": "a49"
+        },
+        {
+          "id": "a51"
+        },
+        {
+          "id": "a57"
+        },
+        {
+          "id": "a65"
+        },
+        {
+          "id": "a69"
+        },
+        {
+          "id": "a70"
+        },
+        {
+          "id": "a73"
+        },
+        {
+          "id": "a52"
+        }
+      ],
       "article": false
     },
     {
@@ -868,7 +1117,11 @@
       "type": 4,
       "name": "bits",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a68"
+        }
+      ],
       "article": false
     },
     {
@@ -876,7 +1129,11 @@
       "type": 4,
       "name": "flauta",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a63"
+        }
+      ],
       "article": false
     },
     {
@@ -884,7 +1141,11 @@
       "type": 4,
       "name": "Acordeón",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "a61"
+        }
+      ],
       "article": false
     },
     {
@@ -1020,7 +1281,14 @@
       "type": 4,
       "name": "Cumbia",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b4"
+        },
+        {
+          "id": "b1"
+        }
+      ],
       "article": true
     },
     {
@@ -1028,7 +1296,11 @@
       "type": 4,
       "name": "dub inglés",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b4"
+        }
+      ],
       "article": false
     },
     {
@@ -1036,7 +1308,11 @@
       "type": 4,
       "name": "vallenato",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b1"
+        }
+      ],
       "article": false
     },
     {
@@ -1044,7 +1320,14 @@
       "type": 4,
       "name": "jazz",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b2"
+        }
+      ],
       "article": true
     },
     {
@@ -1052,7 +1335,11 @@
       "type": 4,
       "name": "salsa",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b1"
+        }
+      ],
       "article": true
     },
     {
@@ -1060,7 +1347,11 @@
       "type": 4,
       "name": "champeta",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b1"
+        }
+      ],
       "article": true
     },
     {
@@ -1068,7 +1359,11 @@
       "type": 4,
       "name": "chicha peruana",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b1"
+        }
+      ],
       "article": false
     },
     {
@@ -1076,7 +1371,11 @@
       "type": 4,
       "name": "cumbia sicodélica",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b4"
+        }
+      ],
       "article": false
     },
     {
@@ -1084,7 +1383,11 @@
       "type": 4,
       "name": "chalupa",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": false
     },
     {
@@ -1092,7 +1395,11 @@
       "type": 4,
       "name": "fandango",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": false
     },
     {
@@ -1100,7 +1407,11 @@
       "type": 4,
       "name": "puya",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": false
     },
     {
@@ -1108,7 +1419,11 @@
       "type": 4,
       "name": "currulao",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": true
     },
     {
@@ -1116,7 +1431,11 @@
       "type": 4,
       "name": "joropo",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": false
     },
     {
@@ -1124,7 +1443,11 @@
       "type": 4,
       "name": "rap",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": false
     },
     {
@@ -1132,7 +1455,11 @@
       "type": 4,
       "name": "rock",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": true
     },
     {
@@ -1140,7 +1467,11 @@
       "type": 4,
       "name": "funk",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b2"
+        }
+      ],
       "article": true
     },
     {
@@ -1148,7 +1479,11 @@
       "type": 4,
       "name": "metal",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b6"
+        }
+      ],
       "article": false
     },
     {
@@ -1156,7 +1491,11 @@
       "type": 4,
       "name": "indie",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b6"
+        }
+      ],
       "article": false
     },
     {
@@ -1164,7 +1503,11 @@
       "type": 4,
       "name": "electrónica",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b11"
+        }
+      ],
       "article": false
     },
     {
@@ -1172,7 +1515,11 @@
       "type": 4,
       "name": "latin",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b14"
+        }
+      ],
       "article": false
     },
     {
@@ -1180,7 +1527,11 @@
       "type": 4,
       "name": "soul",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b14"
+        }
+      ],
       "article": false
     },
     {
@@ -1238,6 +1589,12 @@
         },
         {
           "id": "b16"
+        },
+        {
+          "id": "ist5"
+        },
+        {
+          "id": "ist9"
         }
       ],
       "article": false
@@ -1259,6 +1616,15 @@
         },
         {
           "id": "b15"
+        },
+        {
+          "id": "ist3"
+        },
+        {
+          "id": "ist4"
+        },
+        {
+          "id": "ist22"
         }
       ],
       "article": true
@@ -1274,6 +1640,12 @@
         },
         {
           "id": "b13"
+        },
+        {
+          "id": "ist1"
+        },
+        {
+          "id": "ist2"
         }
       ],
       "article": false
@@ -1283,7 +1655,20 @@
       "type": 4,
       "name": "María Angélica Valencia",
       "image": "../assets/faces/maria_valencia.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "b1"
+        },
+        {
+          "id": "b16"
+        },
+        {
+          "id": "ist1"
+        },
+        {
+          "id": "ist9"
+        }
+      ],
       "article": true
     },
     {
@@ -1294,6 +1679,9 @@
       "relations": [
         {
           "id": "b1"
+        },
+        {
+          "id": "ist3"
         }
       ],
       "article": false
@@ -1306,6 +1694,12 @@
       "relations": [
         {
           "id": "b1"
+        },
+        {
+          "id": "ist6"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": true
@@ -1318,6 +1712,9 @@
       "relations": [
         {
           "id": "b1"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": false
@@ -1342,6 +1739,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist6"
         }
       ],
       "article": false
@@ -1354,6 +1754,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist11"
         }
       ],
       "article": true
@@ -1366,6 +1769,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1378,6 +1784,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist14"
         }
       ],
       "article": false
@@ -1390,6 +1799,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist4"
         }
       ],
       "article": false
@@ -1402,6 +1814,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist12"
         }
       ],
       "article": false
@@ -1414,6 +1829,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist1"
         }
       ],
       "article": false
@@ -1426,6 +1844,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1438,6 +1859,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist13"
         }
       ],
       "article": false
@@ -1450,6 +1874,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist13"
         }
       ],
       "article": false
@@ -1462,6 +1889,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist15"
         }
       ],
       "article": false
@@ -1474,6 +1904,9 @@
       "relations": [
         {
           "id": "b3"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1534,6 +1967,9 @@
       "relations": [
         {
           "id": "b2"
+        },
+        {
+          "id": "ist16"
         }
       ],
       "article": false
@@ -1546,6 +1982,9 @@
       "relations": [
         {
           "id": "b2"
+        },
+        {
+          "id": "ist16"
         }
       ],
       "article": false
@@ -1564,6 +2003,12 @@
         },
         {
           "id": "b12"
+        },
+        {
+          "id": "ist3"
+        },
+        {
+          "id": "ist20"
         }
       ],
       "article": false
@@ -1576,6 +2021,9 @@
       "relations": [
         {
           "id": "b2"
+        },
+        {
+          "id": "ist16"
         }
       ],
       "article": false
@@ -1588,6 +2036,9 @@
       "relations": [
         {
           "id": "b2"
+        },
+        {
+          "id": "ist6"
         }
       ],
       "article": false
@@ -1600,6 +2051,9 @@
       "relations": [
         {
           "id": "b2"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": false
@@ -1612,6 +2066,9 @@
       "relations": [
         {
           "id": "b6"
+        },
+        {
+          "id": "ist1"
         }
       ],
       "article": false
@@ -1624,6 +2081,9 @@
       "relations": [
         {
           "id": "b6"
+        },
+        {
+          "id": "ist1"
         }
       ],
       "article": true
@@ -1636,6 +2096,9 @@
       "relations": [
         {
           "id": "b6"
+        },
+        {
+          "id": "ist3"
         }
       ],
       "article": false
@@ -1648,6 +2111,9 @@
       "relations": [
         {
           "id": "b6"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": false
@@ -1663,6 +2129,9 @@
         },
         {
           "id": "b16"
+        },
+        {
+          "id": "ist6"
         }
       ],
       "article": true
@@ -1675,6 +2144,9 @@
       "relations": [
         {
           "id": "b6"
+        },
+        {
+          "id": "ist9"
         }
       ],
       "article": true
@@ -1699,6 +2171,9 @@
       "relations": [
         {
           "id": "b7"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": true
@@ -1723,6 +2198,9 @@
       "relations": [
         {
           "id": "b8"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": true
@@ -1735,6 +2213,9 @@
       "relations": [
         {
           "id": "b8"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": false
@@ -1747,6 +2228,9 @@
       "relations": [
         {
           "id": "b8"
+        },
+        {
+          "id": "ist6"
         }
       ],
       "article": false
@@ -1759,6 +2243,9 @@
       "relations": [
         {
           "id": "b8"
+        },
+        {
+          "id": "ist1"
         }
       ],
       "article": false
@@ -1771,6 +2258,9 @@
       "relations": [
         {
           "id": "b9"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1783,6 +2273,9 @@
       "relations": [
         {
           "id": "b9"
+        },
+        {
+          "id": "ist24"
         }
       ],
       "article": false
@@ -1795,6 +2288,9 @@
       "relations": [
         {
           "id": "b9"
+        },
+        {
+          "id": "ist13"
         }
       ],
       "article": false
@@ -1807,6 +2303,9 @@
       "relations": [
         {
           "id": "b10"
+        },
+        {
+          "id": "ist3"
         }
       ],
       "article": false
@@ -1819,6 +2318,9 @@
       "relations": [
         {
           "id": "b10"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": true
@@ -1831,6 +2333,9 @@
       "relations": [
         {
           "id": "b10"
+        },
+        {
+          "id": "ist24"
         }
       ],
       "article": false
@@ -1843,6 +2348,9 @@
       "relations": [
         {
           "id": "b10"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1855,6 +2363,12 @@
       "relations": [
         {
           "id": "b11"
+        },
+        {
+          "id": "ist5"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1885,6 +2399,12 @@
         },
         {
           "id": "b16"
+        },
+        {
+          "id": "ist19"
+        },
+        {
+          "id": "ist22"
         }
       ],
       "article": false
@@ -1900,6 +2420,12 @@
         },
         {
           "id": "b12"
+        },
+        {
+          "id": "ist6"
+        },
+        {
+          "id": "ist24"
         }
       ],
       "article": false
@@ -1912,6 +2438,12 @@
       "relations": [
         {
           "id": "b11"
+        },
+        {
+          "id": "ist6"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": false
@@ -1924,6 +2456,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -1936,6 +2471,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist4"
         }
       ],
       "article": false
@@ -1948,6 +2486,15 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist21"
+        },
+        {
+          "id": "ist25"
+        },
+        {
+          "id": "ist14"
         }
       ],
       "article": false
@@ -1960,6 +2507,12 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist21"
+        },
+        {
+          "id": "ist25"
         }
       ],
       "article": false
@@ -1975,6 +2528,12 @@
         },
         {
           "id": "b14"
+        },
+        {
+          "id": "ist5"
+        },
+        {
+          "id": "ist29"
         }
       ],
       "article": false
@@ -1987,6 +2546,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist11"
         }
       ],
       "article": false
@@ -1999,6 +2561,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist28"
         }
       ],
       "article": false
@@ -2011,6 +2576,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist1"
         }
       ],
       "article": false
@@ -2023,6 +2591,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -2035,6 +2606,9 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist13"
         }
       ],
       "article": false
@@ -2047,6 +2621,12 @@
       "relations": [
         {
           "id": "b13"
+        },
+        {
+          "id": "ist1"
+        },
+        {
+          "id": "ist15"
         }
       ],
       "article": false
@@ -2059,6 +2639,12 @@
       "relations": [
         {
           "id": "b15"
+        },
+        {
+          "id": "ist6"
+        },
+        {
+          "id": "ist27"
         }
       ],
       "article": false
@@ -2071,6 +2657,9 @@
       "relations": [
         {
           "id": "b15"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -2083,6 +2672,9 @@
       "relations": [
         {
           "id": "b15"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -2095,6 +2687,9 @@
       "relations": [
         {
           "id": "b15"
+        },
+        {
+          "id": "ist5"
         }
       ],
       "article": false
@@ -2107,6 +2702,9 @@
       "relations": [
         {
           "id": "b15"
+        },
+        {
+          "id": "5544332"
         }
       ],
       "article": false
@@ -2119,6 +2717,9 @@
       "relations": [
         {
           "id": "b15"
+        },
+        {
+          "id": "ist26"
         }
       ],
       "article": false
@@ -2128,7 +2729,11 @@
       "type": 4,
       "name": "Luis Daniel Vega",
       "image": "../assets/circle.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "ist5"
+        }
+      ],
       "article": false
     },
     {
@@ -2136,7 +2741,11 @@
       "type": 4,
       "name": "Benjamin",
       "image": "../assets/faces/benjamin.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "5544332"
+        }
+      ],
       "article": false
     },
     {
@@ -2162,6 +2771,24 @@
         },
         {
           "id": "a2"
+        },
+        {
+          "id": "in1"
+        },
+        {
+          "id": "in3"
+        },
+        {
+          "id": "in4"
+        },
+        {
+          "id": "in5"
+        },
+        {
+          "id": "in6"
+        },
+        {
+          "id": "in7"
         }
       ],
       "article": true,
@@ -2190,6 +2817,33 @@
         },
         {
           "id": "a31"
+        },
+        {
+          "id": "in9"
+        },
+        {
+          "id": "in10"
+        },
+        {
+          "id": "in11"
+        },
+        {
+          "id": "in12"
+        },
+        {
+          "id": "in13"
+        },
+        {
+          "id": "in14"
+        },
+        {
+          "id": "in16"
+        },
+        {
+          "id": "in4"
+        },
+        {
+          "id": "in15"
         }
       ],
       "article": true,
@@ -2270,6 +2924,15 @@
         },
         {
           "id": "a2"
+        },
+        {
+          "id": "in2"
+        },
+        {
+          "id": "in1"
+        },
+        {
+          "id": "in8"
         }
       ],
       "article": true,
@@ -2317,6 +2980,9 @@
         },
         {
           "id": "a37"
+        },
+        {
+          "id": "in17"
         }
       ],
       "article": false,
@@ -2336,6 +3002,9 @@
         },
         {
           "id": "a40"
+        },
+        {
+          "id": "in18"
         }
       ],
       "article": true,
@@ -2430,6 +3099,9 @@
         },
         {
           "id": "a56"
+        },
+        {
+          "id": "in19"
         }
       ],
       "article": true,
@@ -2520,6 +3192,12 @@
       "relations": [
         {
           "id": "a61"
+        },
+        {
+          "id": "in20"
+        },
+        {
+          "id": "in21"
         }
       ],
       "article": false,

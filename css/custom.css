@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'Letter'; /*a name to be used later*/
+    src: url('../assets/Letter Gothic Std.ttf'); /*URL to font*/
+}
+
 .sidebar {
+    border-radius:10px;
     -moz-transition: left .1s;
     -webkit-transition: left .1s;
     -o-transition: left .1s;
@@ -19,49 +25,23 @@
     transition: left 1s;
     left: 0px;
 }
-/*
-div {
-   text-align: center;
-}
 
-*/
 .snap-drawers {
-    /*
-    background: none repeat scroll 0% 0% #323949;
-    */
     background: none repeat scroll 0% 0% url(../assets/75.png);
-
     color: #EEE;
     font-family: sans-serif;
 }
-
 
 .snap-drawer h4 {
     padding: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 0px;
-
 }
+
 .snap-drawer {
     color: #EEE;
 }
-.snap-drawer ul {
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-}
-.snap-drawer li > a {
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    font-weight: bold;
-    text-shadow: 0px 1px 0px #000;
-    text-decoration: none;
-    color: #CCC;
-    text-indent: 20px;
 
-}
 .snap-drawer .big {
     background: url(../assets/75.png);
     display: block;
@@ -76,6 +56,12 @@ div {
     width: 17.5em;
     border-radius: 0     10px      10px           0;
 }
+
+.control{
+  position: absolute;
+  margin-top: 300px;
+}
+
 .left{
     display: inline-block;
     text-align: right;
@@ -87,14 +73,31 @@ div {
    height: 5em;
 
 }
+
+.title{
+  margin-left: 15px;
+  font-size: 35px;
+  font-family: 'Letter';
+}
+
+.intro{
+  margin-left: 15px;
+  font-family: 'Letter';
+  font-size: 17px;
+}
+
+.images_menu{
+  text-align: center;
+  z-index: 50000;
+}
+
+.ceper{
+  max-width: 95px;
+}
+
 .thumb{
-  /*
-  width: 10em;
-  height: 10em;
-  */
   width: 40%;
   height:  40%;
-
 }
 
 .snap-drawer .outside {
@@ -109,6 +112,6 @@ div {
     color: #CCC;
     text-indent: 20px;
     width: 2.5em;
-    border-radius: 0     10px      10px           0;
+    border-radius: 0 10px 10px 0;
     margin-left: 15em;
 }
