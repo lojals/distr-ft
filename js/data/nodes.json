@@ -167,7 +167,7 @@
     },
     {
       "id": "1135000",
-      "type": 3,
+      "type": 4,
       "name": "Caribe",
       "image": "../assets/botones_influencias/botones_influencias_tipo_caribe.png",
       "relations": [
@@ -200,7 +200,7 @@
     },
     {
       "id": "1135999",
-      "type": 3,
+      "type": 4,
       "name": "Pacífico",
       "image": "../assets/botones_influencias/botones_influencias_tipo_pacifico.png",
       "relations": [
@@ -245,7 +245,7 @@
     },
     {
       "id": "3512544",
-      "type": 3,
+      "type": 4,
       "name": "hombres",
       "image": "../assets/botones_protagonistas/protagonistas_TIPO_hombre.png",
       "relations": [
@@ -431,7 +431,7 @@
     },
     {
       "id": "7686788",
-      "type": 3,
+      "type": 4,
       "name": "mujeres",
       "image": "../assets/botones_protagonistas/protagonistas_TIPO_mujer.png",
       "relations": [
@@ -464,7 +464,7 @@
     },
     {
       "id": "35125441",
-      "type": 3,
+      "type": 4,
       "name": "hombres",
       "image": "../assets/botones_protagonistas/protagonistas_TIPO_hombre.png",
       "relations": [
@@ -494,7 +494,7 @@
     },
     {
       "id": "76867881",
-      "type": 3,
+      "type": 4,
       "name": "mujeres",
       "image": "../assets/botones_protagonistas/protagonistas_TIPO_mujer.png",
       "relations": [
@@ -538,9 +538,6 @@
           "id": "ist6"
         },
         {
-          "id": "ist11"
-        },
-        {
           "id": "ist24"
         }
       ],
@@ -551,7 +548,17 @@
       "type": 3,
       "name": "Teclados",
       "image": "../assets/botones_instrumentos/instru_teclados.png",
-      "relations": [],
+      "relations": [
+        {
+          "id": "ist7"
+        },
+        {
+          "id": "ist10"
+        },
+        {
+          "id": "ist11"
+        }
+      ],
       "article": false
     },
     {
@@ -651,7 +658,7 @@
       "id": "ist1",
       "type": 4,
       "name": "saxofón",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/saxofon.png",
       "relations": [
         {
           "id": "a16"
@@ -684,7 +691,7 @@
       "id": "ist2",
       "type": 4,
       "name": "clarinete",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/clarinete.png",
       "relations": [
         {
           "id": "a4"
@@ -696,7 +703,7 @@
       "id": "ist3",
       "type": 4,
       "name": "bateria",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/bateria.png",
       "relations": [
         {
           "id": "a48"
@@ -720,7 +727,7 @@
       "id": "ist4",
       "type": 4,
       "name": "timbales",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/timbales.png",
       "relations": [
         {
           "id": "a14"
@@ -738,7 +745,7 @@
       "id": "ist5",
       "type": 4,
       "name": "guitarra",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/guitarra.png",
       "relations": [
         {
           "id": "a2"
@@ -780,7 +787,7 @@
       "id": "ist6",
       "type": 4,
       "name": "bajo",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/bajo.png",
       "relations": [
         {
           "id": "a1"
@@ -816,7 +823,7 @@
       "id": "ist7",
       "type": 4,
       "name": "teclados",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/teclados.png",
       "relations": [],
       "article": false
     },
@@ -836,7 +843,7 @@
       "id": "ist9",
       "type": 4,
       "name": "sintetizador",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/sintetizador.png",
       "relations": [
         {
           "id": "a2"
@@ -854,7 +861,7 @@
       "id": "ist10",
       "type": 4,
       "name": "organo",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/organo.png",
       "relations": [],
       "article": false
     },
@@ -862,7 +869,7 @@
       "id": "ist11",
       "type": 4,
       "name": "piano",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/piano.png",
       "relations": [
         {
           "id": "a11"
@@ -877,7 +884,7 @@
       "id": "ist12",
       "type": 4,
       "name": "bongos",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/bongos.png",
       "relations": [
         {
           "id": "a15"
@@ -889,7 +896,7 @@
       "id": "ist13",
       "type": 4,
       "name": "trombones",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/trombon.png",
       "relations": [
         {
           "id": "a18"
@@ -925,7 +932,7 @@
       "id": "ist15",
       "type": 4,
       "name": "trompetas",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/trompeta.png",
       "relations": [
         {
           "id": "a67"
@@ -940,7 +947,7 @@
       "id": "ist16",
       "type": 4,
       "name": "gaitas ",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/gaitas.png",
       "relations": [
         {
           "id": "a26"
@@ -958,7 +965,7 @@
       "id": "ist17",
       "type": 4,
       "name": "gaita hembra",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/gaita_hembra.png",
       "relations": [],
       "article": false
     },
@@ -974,7 +981,7 @@
       "id": "ist19",
       "type": 4,
       "name": "marimbas",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/marimba.png",
       "relations": [
         {
           "id": "a54"
@@ -994,7 +1001,7 @@
       "id": "ist21",
       "type": 4,
       "name": "tambor alegre",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/tambor_alegre.png",
       "relations": [
         {
           "id": "a60"
@@ -1024,7 +1031,7 @@
       "id": "ist23",
       "type": 4,
       "name": "maraca",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/maracas.png",
       "relations": [],
       "article": false
     },
@@ -1032,7 +1039,7 @@
       "id": "ist24",
       "type": 4,
       "name": "contra bajo",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/contrabajo.png",
       "relations": [
         {
           "id": "a46"
@@ -1050,7 +1057,7 @@
       "id": "ist25",
       "type": 4,
       "name": "Caja",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/caja.png",
       "relations": [
         {
           "id": "a60"
@@ -1065,7 +1072,7 @@
       "id": "ist26",
       "type": 4,
       "name": "Voz",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/voz.png",
       "relations": [
         {
           "id": "a12"
@@ -1128,7 +1135,7 @@
       "id": "ist28",
       "type": 4,
       "name": "flauta",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/flauta.png",
       "relations": [
         {
           "id": "a63"
@@ -1140,7 +1147,7 @@
       "id": "ist29",
       "type": 4,
       "name": "Acordeón",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_instrumentos/instrumentos/acordeon.png",
       "relations": [
         {
           "id": "a61"
@@ -1280,7 +1287,7 @@
       "id": "in1",
       "type": 4,
       "name": "Cumbia",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/cumbia.png",
       "relations": [
         {
           "id": "b4"
@@ -1295,7 +1302,7 @@
       "id": "in2",
       "type": 4,
       "name": "dub inglés",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/dub_ingles.png",
       "relations": [
         {
           "id": "b4"
@@ -1307,7 +1314,7 @@
       "id": "in3",
       "type": 4,
       "name": "vallenato",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/vallenato.png",
       "relations": [
         {
           "id": "b1"
@@ -1319,7 +1326,7 @@
       "id": "in4",
       "type": 4,
       "name": "jazz",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/jazz.png",
       "relations": [
         {
           "id": "b1"
@@ -1334,7 +1341,7 @@
       "id": "in5",
       "type": 4,
       "name": "salsa",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/salsa.png",
       "relations": [
         {
           "id": "b1"
@@ -1346,7 +1353,7 @@
       "id": "in6",
       "type": 4,
       "name": "champeta",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/champeta.png",
       "relations": [
         {
           "id": "b1"
@@ -1370,7 +1377,7 @@
       "id": "in8",
       "type": 4,
       "name": "cumbia sicodélica",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/cumbia_sicodelica.png",
       "relations": [
         {
           "id": "b4"
@@ -1382,7 +1389,7 @@
       "id": "in9",
       "type": 4,
       "name": "chalupa",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/chalupa.png",
       "relations": [
         {
           "id": "b2"
@@ -1394,7 +1401,7 @@
       "id": "in10",
       "type": 4,
       "name": "fandango",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/fandango.png",
       "relations": [
         {
           "id": "b2"
@@ -1406,7 +1413,7 @@
       "id": "in11",
       "type": 4,
       "name": "puya",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/puya.png",
       "relations": [
         {
           "id": "b2"
@@ -1418,7 +1425,7 @@
       "id": "in12",
       "type": 4,
       "name": "currulao",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/currulao.png",
       "relations": [
         {
           "id": "b2"
@@ -1430,7 +1437,7 @@
       "id": "in13",
       "type": 4,
       "name": "joropo",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/joropo.png",
       "relations": [
         {
           "id": "b2"
@@ -1442,7 +1449,7 @@
       "id": "in14",
       "type": 4,
       "name": "rap",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/rap.png",
       "relations": [
         {
           "id": "b2"
@@ -1454,7 +1461,7 @@
       "id": "in15",
       "type": 4,
       "name": "rock",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/rock.png",
       "relations": [
         {
           "id": "b2"
@@ -1466,7 +1473,7 @@
       "id": "in16",
       "type": 4,
       "name": "funk",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/funk.png",
       "relations": [
         {
           "id": "b2"
@@ -1478,7 +1485,7 @@
       "id": "in17",
       "type": 4,
       "name": "metal",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/heavymetal.png",
       "relations": [
         {
           "id": "b6"
@@ -1490,7 +1497,7 @@
       "id": "in18",
       "type": 4,
       "name": "indie",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/indie.png",
       "relations": [
         {
           "id": "b6"
@@ -1502,7 +1509,7 @@
       "id": "in19",
       "type": 4,
       "name": "electrónica",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/electronica.png",
       "relations": [
         {
           "id": "b11"
@@ -1514,7 +1521,7 @@
       "id": "in20",
       "type": 4,
       "name": "latin",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/latin_music.png",
       "relations": [
         {
           "id": "b14"
@@ -1526,7 +1533,7 @@
       "id": "in21",
       "type": 4,
       "name": "soul",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/soul.png",
       "relations": [
         {
           "id": "b14"
@@ -1538,7 +1545,7 @@
       "id": "in22",
       "type": 4,
       "name": "Chandé",
-      "image": "../assets/circle.png",
+      "image": "../assets/botones_influencias/influencias/chande.png",
       "relations": [],
       "article": false
     },
@@ -2942,7 +2949,7 @@
       "id": "b5",
       "type": 4,
       "name": "Los pirañas",
-      "image": "../assets/botones_bandas/bandas_cover/los_pirañas.png",
+      "image": "../assets/botones_bandas/bandas_cover/los_piranas.png",
       "relations": [
         {
           "id": "a1"

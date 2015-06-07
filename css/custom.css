@@ -3,19 +3,24 @@
     src: url('../assets/Letter Gothic Std.ttf'); /*URL to font*/
 }
 
+body{
+  font-family: 'Letter';
+}
+
 .sidebar {
-    border-radius:10px;
+    /*border-radius: 0px 20px 10px 30px;*/
     -moz-transition: left .1s;
     -webkit-transition: left .1s;
     -o-transition: left .1s;
     transition: left .1s;
-    width: 15em;
+    width: 290px;
     background: url(../assets/75.png);
     position: absolute;
     top: 0px;
-    bottom: 0px;
-    left: -15em;
-    z-index: 10000;
+    /*bottom: 0px;*/
+    padding-bottom: 25px;
+    left: -290px;
+    z-index: 100;
 }
 
 .slide-out {
@@ -52,14 +57,19 @@
     text-shadow: 0px 1px 0px #000;
     text-decoration: none;
     color: #CCC;
-    text-indent: 20px;
-    width: 17.5em;
+    /*text-indent: 35px;*/
+    width: 17.5em !;
     border-radius: 0     10px      10px           0;
 }
 
 .control{
   position: absolute;
   margin-top: 300px;
+}
+
+.graph{
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .left{
@@ -75,15 +85,18 @@
 }
 
 .title{
+  margin-top: 0px;
   margin-left: 15px;
   font-size: 35px;
   font-family: 'Letter';
 }
 
 .intro{
+  margin-top: 5px;
   margin-left: 15px;
+  margin-right: 15px;
   font-family: 'Letter';
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .images_menu{
@@ -92,7 +105,7 @@
 }
 
 .ceper{
-  max-width: 95px;
+   max-width: 95px;
 }
 
 .thumb{
@@ -111,7 +124,97 @@
     text-decoration: none;
     color: #CCC;
     text-indent: 20px;
-    width: 2.5em;
+    width: 2.5em !;
     border-radius: 0 10px 10px 0;
-    margin-left: 15em;
+    margin-left: 290px;
+}
+
+.modal-content{
+  background-color: #2CFFFE;
+}
+/*
+///// USADO PARA EL MODAL
+*/
+.description p{
+  text-align: center;
+}
+
+.img_modal{
+  max-width: 200px;
+}
+
+.info_modal_detail div{
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}
+
+.desc1{
+  margin-top: 30px;
+  background-color: #FFF;
+  font-size: 15px;
+  font-family: 'Letter';
+}
+
+.tit_info_modal{
+  background-color: #FFF;
+  color: #000;
+  font-size: 20px;
+  font-family: 'Letter';
+  padding-left: 30px;
+}
+
+.desc_info_modal{
+  color: #000;
+  font-size: 12px;
+  font-family: 'Letter';
+}
+
+.content-modal{
+  padding: 15px  15px  15px  15px;
+}
+
+.information{
+  /*background-color: #FF0000;*/
+}
+
+.detail{
+  padding-right: 30px;
+  /*margin-right: 30px;*/
+}
+
+.detail h1{
+  padding: 15px;
+
+  background-color: #EA267A;
+  color: #FFF;
+}
+
+.detail p,h4{
+  padding: 10px;
+}
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.content_detail{
+  background-color: #FFF;
+}
+
+.modal-lg {
+  width: 90% !important;
+}
+
+.modal-dialog{
+  z-index: 30000 !important;
 }

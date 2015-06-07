@@ -1,5 +1,5 @@
 (function (){
-  var app = angular.module('Distritoapp',['ngRoute'])
+  var app = angular.module('Distritoapp',['ngRoute','ui.bootstrap'])
   app.config(function($routeProvider) {
     $routeProvider
     .when('/main', {
@@ -22,8 +22,7 @@
 
   app.run();
 
-  app.controller('distritoController',function($scope,Graph,$rootScope,NodeType,$http){
-    var nodoOlinguito={"id": "1763628","type": 1,"name": "Distrito","image": "../assets/logo_def.png","relations": [],"article": false};
+  app.controller('distritoController',function($scope,Graph,$rootScope,NodeType,$http,$modal){
     //var misnodos = new Array(nodoOlinguito)
     var misnodos;
     $http.get('js/data/nodes.json').
@@ -185,6 +184,7 @@
           var  x = w / 2 + 25 * Math.cos(r * i);
           var  y = h / 2 + 30 * Math.sin(r * i);
           //var  rect = new cola.vpsc.Rectangle(0, w, 0, h);
+          //cambio
           var  rect = new cola.vpsc.Rectangle(0, 40, 0, 40);
           var  vi = rect.rayIntersection(x, y);
 
@@ -207,6 +207,20 @@
         if(v.info.article){
           //window.open("#/article/"+v.id ,'_blank');
           console.log("Url de articulo: #/article/"+v.id );
+          console.log(v);
+          $scope.items = [v.label,v.imgurl,'dfsfsdgh'];
+          var modalInstance = $modal.open({
+            animation: true,
+            templateUrl: 'tpl/article.html',
+            controller: 'artitleInstrumentCtrl',
+            size: 'lg',
+            resolve: {
+              items: function () {
+                return $scope.items;
+              }
+            }
+          });
+
         }
         else console.log("No hay articulo disponible");
         //console.log(v);
@@ -537,9 +551,9 @@ return Graph;
     //Node Size
     var width=0;
     if (type =="1") width =250;
-    else if (type =="2") width =120;
-    else if(type =="3") width =100;
-    else if(type =="4") width =80;
+    else if (type =="2") width =150;
+    else if(type =="3") width =80;
+    else if(type =="4") width =120;
     else  width =20;
     return width;
   };
@@ -547,7 +561,7 @@ return Graph;
     var lenght=0;
     if (type =="1") lenght =175;
     else if (type =="2") lenght =120;
-    else if(type =="3") lenght =100;
+    else if(type =="3") lenght =200;
     else if(type =="4") lenght =200;
     else  lenght =20;
     return lenght;
