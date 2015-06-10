@@ -2,32 +2,31 @@
   var app = angular.module('Distritoapp',['ngRoute','ui.bootstrap'])
   app.config(function($routeProvider) {
     $routeProvider
-    .when('/main', {
+    .when('/graph', {
       templateUrl: 'tpl/main.html',
       controller: 'distritoController'
+    }).
+    when('/graph/article/:idNode', {
+      controller: 'articleController'
     }).
     when('/mapa', {
       templateUrl: 'tpl/mapa.html',
       controller: 'mapController'
     }).
-    when('/article/:idNode', {
-      templateUrl: 'tpl/article.html',
-      controller: 'articleController',
-      resolve:{}
-    }).
+
     otherwise({
-      redirectTo: '/main'
+      redirectTo: '/graph'
     });
   });
 
   app.run();
 
-  app.controller('distritoController',function($scope,Graph,$rootScope,NodeType,$http,$modal){
-    //var misnodos = new Array(nodoOlinguito)
+  app.controller('distritoController',function($scope,Graph,$rootScope,NodeType,$http,$modal,$location){
+
     var misnodos;
-    $http.get('js/data/nodes.json').
+    $http.get('http://distritosonico.herokuapp.com/node').
     success(function (data) {
-      misnodos = data.data;
+      misnodos = data;
       var tmdb;
       (function (tmdb) {
         $rootScope.misnodos=misnodos;
@@ -101,7 +100,6 @@
       var nodeMouseDown = false;
 
       function redraw(transition) {
-        // if mouse down then we are dragging not panning
         if (nodeMouseDown) return;
         (transition ? vis.transition() : vis)
         .attr("transform", "translate(" + zoom.translate() + ") scale(" + zoom.scale() + ")");
@@ -112,6 +110,8 @@
       var viewgraph = { nodes: [], links: [] };
       var nodeWidth = 30, nodeHeight = 30;
 
+
+      //nodoinicial
       var d = modelgraph.getNode( "1763628","Main Node", addViewNode);
 
       $.when(d).then(function (startNode) {
@@ -175,40 +175,67 @@
       }
 
       function hintNeighbours(v) {
-        if (!v.cast) return;
-        var hiddenEdges = v.cast.length + 1 - v.degree;
-        var r = 2 * Math.PI / hiddenEdges;
-        for (var i = 0; i < hiddenEdges; ++i) {
-          var w = sizes.width(v.info.type) - 6;
-          var  h = sizes.width(v.info.type) - 6;
-          var  x = w / 2 + 25 * Math.cos(r * i);
-          var  y = h / 2 + 30 * Math.sin(r * i);
-          //var  rect = new cola.vpsc.Rectangle(0, w, 0, h);
-          //cambio
-          var  rect = new cola.vpsc.Rectangle(0, 40, 0, 40);
-          var  vi = rect.rayIntersection(x, y);
+        console.log("Igual entra "+v.info.article + "  " + v.id);
+        if(v.info.article){
+          d3.select("#"+v.name()).append("g").attr("id", function (d) { return d.name() + "_spikes" })
+          .attr("transform", "translate(3,3)");
 
+          if (!v.cast) return;
           var dview = d3.select("#"+v.name()+"_spikes");
+          dview.selectAll(".spike").remove();
 
-          dview.append("circle")
-          .attr("class", "spike")
-          .attr("rx", 1).attr("ry", 1)
-          .attr("x", 0).attr("y", 0)
+          var size = sizes.width(v.info.type)-6;
+          dview.append("svg")
+            .attr("class", "spike")
+            .append("circle")
+            .attr("cx", size/2)
+            .attr("cy", size/2)
+            .attr("r", size/2)
+            .style("opacity", .5)
+            .style("fill", "black").on("click", function () { click(v) });
 
-          .attr("width", sizes.width(v.info.type)).attr("height", sizes.width(v.info.type))
+            dview.append("text")
+                .attr("class", "spike")
+                .style("fill", "white")
+                .attr("width", size -6)
+                .attr("x",  size/2)
+                .attr("y", size/2 -3)
+                .attr("font-family", "letter")
+                .attr("text-anchor", "middle")
+                .attr("font-size", "16px")
+                .text("Ver más");
 
-          .attr("stroke", "white")
-          .attr("transform", "translate("+vi.x+","+vi.y+") rotate("+(360*i/hiddenEdges)+")")
-          .on("click", function () { click(v) });
+          dview.append("text")
+              .attr("class", "spike")
+              .style("fill", "white")
+              .attr("width", size -6)
+              .attr("x",  size/2)
+              .attr("y", size/2 +10)
+              .attr("font-family", "letter")
+              .attr("text-anchor", "middle")
+              .attr("font-size", "10px")
+              .text("Doble click");
+
+
         }
       }
-      function articleClick(v){
 
+      function unhintNeighbours(v) {
+        var dview = d3.select("#" + v.name() + "_spikes");
+        dview.selectAll(".spike").remove();
+      }
+
+
+      function articleClick(v){
+        console.log("Igual entra");
         if(v.info.article){
           //window.open("#/article/"+v.id ,'_blank');
+          //$window.location.href= "#graph/article/"+v.id;
+
+
           console.log("Url de articulo: #/article/"+v.id );
           console.log(v);
-          $scope.items = [v.label,v.imgurl,'dfsfsdgh'];
+          $scope.items = [v.label,v.imgurl,v.id];
           var modalInstance = $modal.open({
             animation: true,
             templateUrl: 'tpl/article.html',
@@ -220,15 +247,9 @@
               }
             }
           });
-
         }
         else console.log("No hay articulo disponible");
         //console.log(v);
-      }
-
-      function unhintNeighbours(v) {
-        var dview = d3.select("#" + v.name() + "_spikes");
-        dview.selectAll(".spike").remove();
       }
 
       function inView(v) { return typeof v.viewgraphid !== 'undefined'; }
@@ -298,51 +319,23 @@
         .on("touchmove", function () { d3.event.preventDefault() })
         .on("mouseenter", function (d) { hintNeighbours(d) }) // on mouse over nodes we show "spikes" indicating there are hidden neighbours
         .on("mouseleave", function (d) { unhintNeighbours(d) })
-        .call(d3cola.drag);
+        .on("click", function(node) { click(node) })
+        .on("dblclick", function(d){ articleClick(d) });
+        //.call(d3cola.drag);
 
-        nodeEnter.append("g").attr("id", function (d) { return d.name() + "_spikes" })
-        .attr("transform", "translate(3,3)");
+
 
         nodeEnter.append("rect")
         .attr("rx", function (d) { sizes.width(d.info.type)/2; }).attr("ry", function (d) { sizes.width(d.info.type)/2; })  // Radio en X y Y
         .style("stroke-width","1")
-        .attr("width", function (d) { sizes.width(d.info.type); }  ).attr("height", function (d) { sizes.width(d.info.type); } ) // Asignando atributos de ancho y alto del nodo
-        .on("click", function (d) { click(d) });
+        .attr("width", function (d) { sizes.width(d.info.type); }  ).attr("height", function (d) { sizes.width(d.info.type); } ); // Asignando atributos de ancho y alto del nodo
+//        .on("click", function (d) { click(d) });
 
         //.on("touchend", function (d) { click(d) });
 
         nodeEnter.append("title")
         .text(function (d) { return d.label; });
 
-        //Label con el nombre
-        /*nodeEnter.append("rect")
-        .attr("x", -25)
-        .attr("y", -30)
-        .attr('height', "20px")
-        .style('fill', 'black')
-        .attr('width', function(d){
-          if(d.info.type>=3){
-            var n=d.label.length;
-            if(n<=13)n=n*10;
-            else n=n*9;
-            return n+"px";
-          }
-        });*/
-
-        /*nodeEnter.append("text")
-        .attr("x", -20)
-        .attr("y", -15).text(function (d) {
-
-          if(d.info.type>=3)
-          return d.label;
-          else return "";
-
-        }).
-        attr("class","customlabel")
-        .style("color","white");*/
-
-
-        //Fin label
         nodeEnter.append("image")
         .attr("xlink:href", function (v) {
           var url = v.imgurl;
@@ -355,9 +348,12 @@
             simg.setAttribute("height", sizes.width(v.info.type) - 4); //  Alto Imagen de Fondo
           }
           return img.src = url;
-        })
-        .on("click", function(node) { click(node) })
-        .on("dblclick", function(d){ articleClick(d) });
+        });
+
+
+        /*nodeEnter.append("g").attr("id", function (d) { return d.name() + "_spikes" })
+        .attr("transform", "translate(3,3)");*/
+
 
         node.style("fill", function (d) { return d.colour; });
 
@@ -488,7 +484,6 @@ return Graph;
     this.type = type;
     this.id = id;
     this.degree = 0;
-
   }
 
   Node.prototype.name = function () {

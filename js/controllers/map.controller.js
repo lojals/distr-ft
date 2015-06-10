@@ -8,8 +8,9 @@ angular.module('Distritoapp').controller('mapController',function($scope,$http){
     $scope.boolChangeClass = !$scope.boolChangeClass;
   }
 
-  $http.get('js/data/events.json').
+  $http.get('http://distritosonico.herokuapp.com/events').
     success(function (data) {
+        data = {"features":data};
         //var map = L.mapbox.map('map', 'lojals.m5822dki').setView([4.611331355881756,-74.07840728759766], 13);
         var map = L.mapbox.map('map', 'lojals.m5822dki',{ zoomControl: false });
         // Function loading the Pin icons for each type: Tarimas/Festivales/Tiendas

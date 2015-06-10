@@ -5,7 +5,7 @@
           <p><img src="{{image}}" class="img_modal" alt=""></p>
         </div>
         <div class="col-lg-6">
-          <p class="desc1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="desc1">{{dataarticle.intro}}</p>
         </div>
       </div>
       <div class="row">
@@ -14,7 +14,7 @@
           <p class="tit_info_modal">ORIGEN:</p>
         </div>
         <div class="col-lg-8">
-          <p class="desc_info_modal">fdgdfgkjdfhlgjdflkj</p>
+          <p class="desc_info_modal">{{dataarticle.origin}}</p>
         </div>
       </div>
       <div class="row">
@@ -22,7 +22,7 @@
           <p class="tit_info_modal">ACTIVIDAD:</p>
         </div>
         <div class="col-lg-7">
-          <p class="desc_info_modal">fdgdfgkjdfhlgjdflkj</p>
+          <p class="desc_info_modal">{{dataarticle.activity}}</p>
         </div>
       </div>
       <div class="row">
@@ -30,7 +30,7 @@
           <p class="tit_info_modal">INTEGRANTES:</p>
         </div>
         <div class="col-lg-7">
-          <p class="desc_info_modal">fdgdfgkjdfhlgjdflkj</p>
+          <p class="desc_info_modal"></p>
         </div>
       </div>
       <div class="row">
@@ -38,7 +38,7 @@
           <p class="tit_info_modal">¿A QUÉ SUENA?</p>
         </div>
         <div class="col-lg-6">
-          <p class="desc_info_modal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quia tempore error quibusdam earum, vero, totam sapiente nesciunt dolores ratione distinctio debitis sed</p>
+          <p class="desc_info_modal">{{dataarticle.sound}}</p>
         </div>
       </div>
       <div class="row">
@@ -46,7 +46,7 @@
           <p class="tit_info_modal">INFLUENCIAS</p>
         </div>
         <div class="col-lg-7">
-          <p class="desc_info_modal">fdgdfgkjdfhlgjdflkj</p>
+          <p class="desc_info_modal"></p>
         </div>
       </div>
       <div class="row">
@@ -54,7 +54,7 @@
           <p class="tit_info_modal">DISCOGRAFÍA:</p>
         </div>
         <div class="col-lg-7">
-          <p class="desc_info_modal">fdgdfgkjdfhlgjdflkj</p>
+          <p class="desc_info_modal">{{dataarticle.discography}}</p>
         </div>
       </div>
       <div class="row">
@@ -62,7 +62,7 @@
           <p class="tit_info_modal">ESCENARIOS:</p>
         </div>
         <div class="col-lg-7">
-          <p class="desc_info_modal">fdgdfgkjdfhlgjdflkj</p>
+          <p class="desc_info_modal">{{dataarticle.scenario}}</p>
         </div>
       </div>
     </div>
@@ -70,22 +70,12 @@
     <div class="col-lg-7 detail">
       <div class="content_detail">
         <h1>{{tit}}</h1>
-        <h4>Subtitulo</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        <h4>{{dataarticle.subtitle}}</h4>
+        <p>{{dataarticle.textarticle}}</p>
         <div class="row videos">
-          <div class="col-lg-4 video">
+          <div class="col-lg-4 video" ng-repeat="vid in dataarticle.videos">
             <div class="video">
-              <iframe width="560" height="349" src="https://www.youtube.com/embed/7-7knsP2n5w" frameborder="0" allowfullscreen></iframe>
-             </div>
-          </div>
-          <div class="col-lg-4 video">
-            <div class="video">
-              <iframe width="560" height="349" src="https://www.youtube.com/embed/7-7knsP2n5w" frameborder="0" allowfullscreen></iframe>
-             </div>
-          </div>
-          <div class="col-lg-4 video">
-            <div class="video">
-              <iframe width="560" height="349" src="https://www.youtube.com/embed/7-7knsP2n5w" frameborder="0" allowfullscreen></iframe>
+              <iframe width="560" height="349" src="{{trustSrc(vid)}}" frameborder="0" allowfullscreen></iframe>
              </div>
           </div>
         </div>
